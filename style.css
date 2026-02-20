@@ -117,7 +117,7 @@ img { max-width: 100%; display: block; }
   display: block;
   width: 24px;
   height: 3px;
-  background: #fff;
+  background: var(--orange);
   border-radius: 2px;
   transition: all 0.3s;
 }
