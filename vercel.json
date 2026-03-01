@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "memory-master.tools-mishmish.com" }],
+      "destination": "/memory-master.html"
+    }
+  ]
+}
