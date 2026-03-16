@@ -373,19 +373,32 @@
     auth.languageCode = 'he';
 
     const REDIRECT_AFTER_LOGIN = 'index.html';
-    const IS_APP = new URLSearchParams(window.location.search).get('mode') === 'app';
+    const params   = new URLSearchParams(window.location.search);
+    const IS_APP   = params.get('mode') === 'app';
+    const APP_REDIRECT = params.get('redirect'); // deep link URL from the app
 
     // ─── Send result back to React Native app ───
     function notifyApp(user) {
-      const payload = JSON.stringify({
-        type: 'auth_success',
-        uid:   user.uid,
-        name:  user.displayName || user.email.split('@')[0],
-        email: user.email,
-        photo: user.photoURL || null,
-      });
+      const name = user.displayName || user.email.split('@')[0];
+      // If opened via openAuthSessionAsync — redirect back with params
+      if (APP_REDIRECT) {
+        const sep = APP_REDIRECT.includes('?') ? '&' : '?';
+        window.location.href =
+          APP_REDIRECT + sep +
+          `uid=${encodeURIComponent(user.uid)}` +
+          `&name=${encodeURIComponent(name)}` +
+          `&email=${encodeURIComponent(user.email)}`;
+        return;
+      }
+      // Fallback: WebView postMessage
       if (window.ReactNativeWebView) {
-        window.ReactNativeWebView.postMessage(payload);
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+          type: 'auth_success',
+          uid:   user.uid,
+          name,
+          email: user.email,
+          photo: user.photoURL || null,
+        }));
       }
     }
 
