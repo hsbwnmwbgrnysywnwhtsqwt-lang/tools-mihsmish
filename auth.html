@@ -351,6 +351,8 @@
       createUserWithEmailAndPassword,
       sendPasswordResetEmail,
       signInWithPopup,
+      signInWithRedirect,
+      getRedirectResult,
       GoogleAuthProvider,
       OAuthProvider,
       updateProfile,
@@ -379,7 +381,7 @@
 
     // ─── Send result back to React Native app ───
     function notifyApp(user) {
-      const name = user.displayName || user.email.split('@')[0];
+      const name = user.displayName || (user.email ? user.email.split('@')[0] : 'Player');
       // If opened via openAuthSessionAsync — redirect back with params
       if (APP_REDIRECT) {
         const sep = APP_REDIRECT.includes('?') ? '&' : '?';
@@ -401,6 +403,13 @@
         }));
       }
     }
+
+    // ─── Handle redirect result (Google/Apple in app mode) ───
+    getRedirectResult(auth).then((result) => {
+      if (result?.user && IS_APP) notifyApp(result.user);
+    }).catch((err) => {
+      if (err.code) showAlert(hebrewError(err.code));
+    });
 
     // ─── Auth state listener ───
     onAuthStateChanged(auth, (user) => {
@@ -532,9 +541,12 @@
       clearAlert();
       try {
         const provider = new GoogleAuthProvider();
+        if (IS_APP) {
+          await signInWithRedirect(auth, provider);
+          return; // page will reload after redirect
+        }
         const { user } = await signInWithPopup(auth, provider);
         showAlert('התחברת בהצלחה!', 'success');
-        if (IS_APP) { notifyApp(user); return; }
         setTimeout(() => { window.location.href = REDIRECT_AFTER_LOGIN; }, 1200);
       } catch (err) {
         if (err.code !== 'auth/popup-closed-by-user') showAlert(hebrewError(err.code));
@@ -549,9 +561,12 @@
         provider.addScope('email');
         provider.addScope('name');
         provider.setCustomParameters({ locale: 'he' });
+        if (IS_APP) {
+          await signInWithRedirect(auth, provider);
+          return; // page will reload after redirect
+        }
         const { user } = await signInWithPopup(auth, provider);
         showAlert('התחברת בהצלחה!', 'success');
-        if (IS_APP) { notifyApp(user); return; }
         setTimeout(() => { window.location.href = REDIRECT_AFTER_LOGIN; }, 1200);
       } catch (err) {
         if (err.code !== 'auth/popup-closed-by-user') showAlert(hebrewError(err.code));
