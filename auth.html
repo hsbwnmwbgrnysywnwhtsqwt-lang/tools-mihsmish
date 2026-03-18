@@ -394,15 +394,19 @@
 
     // ─── Send result back to React Native app ───
     function notifyApp(user) {
-      const name = user.displayName || (user.email ? user.email.split('@')[0] : 'Player');
+      const name  = user.displayName || (user.email ? user.email.split('@')[0] : 'Player');
+      const email = user.email || '';
       // If opened via openAuthSessionAsync — redirect back with params
       if (APP_REDIRECT) {
+        // Clear sessionStorage — redirect is happening now
+        sessionStorage.removeItem('koc_is_app');
+        sessionStorage.removeItem('koc_app_redirect');
         const sep = APP_REDIRECT.includes('?') ? '&' : '?';
         window.location.href =
           APP_REDIRECT + sep +
           `uid=${encodeURIComponent(user.uid)}` +
           `&name=${encodeURIComponent(name)}` +
-          `&email=${encodeURIComponent(user.email)}`;
+          `&email=${encodeURIComponent(email)}`;
         return;
       }
       // Fallback: WebView postMessage
