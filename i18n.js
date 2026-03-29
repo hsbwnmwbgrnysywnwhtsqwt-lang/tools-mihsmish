@@ -533,7 +533,6 @@ function detectLang() {
   const saved = localStorage.getItem('mishmish-lang');
   if (saved && TRANSLATIONS[saved]) return saved;
   const browser = (navigator.language || 'he').slice(0, 2).toLowerCase();
-  if (browser === 'ar') return 'ar';
   if (browser === 'en') return 'en';
   return 'he';
 }
@@ -578,7 +577,6 @@ function injectLangSwitcher() {
   div.innerHTML = `
     <button class="lang-btn" data-lang="he" onclick="setLang('he')">עב</button>
     <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" data-lang="ar" onclick="setLang('ar')">ع</button>
   `;
   // Insert before hamburger button (last child) or just append
   const hamburger = navbar.querySelector('.hamburger');
