@@ -351,10 +351,9 @@ const TRANSLATIONS = {
     'blog.subtitle': 'Articles on development, AI, and how to build useful tools',
   },
 
-  // ============================================================
-  ar: {
-    // --- Navbar ---
-    'nav.about':      'حول',
+  // ar removed
+
+  _placeholder: {
     'nav.blog':       'مدونة',
     'nav.contact':    'اتصل بنا',
     'nav.projects':   'مشاريع',
@@ -519,9 +518,6 @@ const TRANSLATIONS = {
     'koc.desc':       'لعبة إطلاق نار متعددة اللاعبين للجوال — عصا تحكم، رصاص، أعداء، جدران حماية وعملات. تشمل متجر الشخصيات، لوحة المتصدرين وFirebase. قيد التطوير.',
     'project.in_dev': '🚧 قيد التطوير',
 
-    // --- Blog page ---
-    'blog.title':    'مدونة mishmish',
-    'blog.subtitle': 'مقالات عن التطوير والذكاء الاصطناعي وكيفية بناء أدوات مفيدة',
   }
 };
 
