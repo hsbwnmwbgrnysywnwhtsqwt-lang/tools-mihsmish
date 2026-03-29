@@ -61,11 +61,11 @@
     </a>
 
     <ul class="navbar-links" id="navLinks">
-      <li><a href="contact.html">צור קשר</a></li>
-      <li><a href="projects.html">פרויקטים</a></li>
-      <li><a href="index.html#skills">כישורים</a></li>
-      <li><a href="index.html#hire">שירותים</a></li>
-      <li><a href="index.html" style="color:var(--orange);">← חזור לדף הבית</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html#skills" data-i18n="nav.skills">כישורים</a></li>
+      <li><a href="index.html#hire" data-i18n="nav.services">שירותים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
     </ul>
 
     <button class="hamburger" id="hamburger" aria-label="תפריט">
@@ -78,9 +78,9 @@
     <div class="beta-hero-glow"></div>
     <div class="beta-hero-inner">
       <img src="michael-nodg.png" alt="מיכאל לב" style="width:220px; height:220px; object-fit:cover; border-radius:50%; margin:0 auto 1.5rem; display:block; filter:drop-shadow(0 8px 32px rgba(244,162,45,0.45));" />
-      <div class="beta-label">אודות</div>
+      <div class="beta-label" data-i18n="about.hero.label">אודות</div>
       <h1>מיכאל לב</h1>
-      <p class="beta-tagline">מתכנת AI · בונה כלים קטנים</p>
+      <p class="beta-tagline" data-i18n="about.hero.tagline">מתכנת AI · בונה כלים קטנים</p>
     </div>
   </section>
 
@@ -89,17 +89,17 @@
     <div class="section-inner">
 
       <div class="about-text">
-          <p>
+          <p data-i18n="about.p1">
             קוראים לי <strong>מיכאל לב</strong>, אני מתכנת AI ויוצר אתרים, אפליקציות וכלים בסיסיים.
             אני מתכנת בעזרת AI כבר <strong>3 שנים</strong>, ומתמקצע ולומד דברים חדשים בכל יום.
             לאחרונה התחלתי לבנות פרויקטים גם עבור אחרים במטרה להתפתח מקצועית ולהפוך את הידע שלי לערך עבורכם.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             הגישה שלי לפיתוח שונה — אני משתמש בכלי AI כמו Claude, ChatGPT ו-Cursor כדי לבנות מוצרים
             שלמים בזמן קצר ובאיכות גבוהה. זה לא אומר שאני פשוט "מדביק קוד" — אני מבין את הקוד,
             מנפה שגיאות, ומקבל החלטות עיצוב ואדריכלות בעצמי. AI הוא הכלי, אני הבונה.
           </p>
-          <p>
+          <p data-i18n="about.p3">
             עד היום בניתי: תוסף כרום עם אלפי משתמשים (<strong>Video Controller</strong>),
             משחק אנדרואיד שפורסם ב-Google Play (<strong>Memory Master</strong>),
             אתר נחיתה עם Meta Pixel לבית ספר (<strong>מיתר</strong>),
@@ -110,22 +110,22 @@
             <div class="about-card">
               <span class="about-card-icon">💡</span>
               <div>
-                <strong>פרויקטים עצמאיים</strong>
-                <p>כלים, תוספים ואתרים שאני בונה מרעיונות שלי — ופורסמים לקהל הרחב</p>
+                <strong data-i18n="about.card1.title">פרויקטים עצמאיים</strong>
+                <p data-i18n="about.card1.desc">כלים, תוספים ואתרים שאני בונה מרעיונות שלי — ופורסמים לקהל הרחב</p>
               </div>
             </div>
             <div class="about-card">
               <span class="about-card-icon">🤝</span>
               <div>
-                <strong>בניה לאחרים</strong>
-                <p>אתרים, אפליקציות וכלים עבור עסקים וארגונים — מרעיון עד פרסום</p>
+                <strong data-i18n="about.card2.title">בניה לאחרים</strong>
+                <p data-i18n="about.card2.desc">אתרים, אפליקציות וכלים עבור עסקים וארגונים — מרעיון עד פרסום</p>
               </div>
             </div>
             <div class="about-card">
               <span class="about-card-icon">🤖</span>
               <div>
-                <strong>AI-first פיתוח</strong>
-                <p>שימוש חכם בכלי AI מאפשר לי לספק מוצרים מהר יותר ובמחיר גמיש</p>
+                <strong data-i18n="about.card3.title">AI-first פיתוח</strong>
+                <p data-i18n="about.card3.desc">שימוש חכם בכלי AI מאפשר לי לספק מוצרים מהר יותר ובמחיר גמיש</p>
               </div>
             </div>
           </div>
@@ -136,29 +136,29 @@
   <!-- איך אני עובד -->
   <section style="background: rgba(255,255,255,0.02); padding: 3rem 1rem;">
     <div class="section-inner">
-      <h2 class="section-title">איך אני עובד</h2>
-      <p class="section-desc">מרעיון למוצר — בצורה פשוטה וישירה</p>
+      <h2 class="section-title" data-i18n="about.how.title">איך אני עובד</h2>
+      <p class="section-desc" data-i18n="about.how.subtitle">מרעיון למוצר — בצורה פשוטה וישירה</p>
 
       <div class="hire-grid" style="margin-top: 2rem;">
         <div class="hire-card">
           <div class="hire-icon">💬</div>
-          <h3>שיחה ראשונית</h3>
-          <p>מבינים ביחד מה צריך לבנות — מה הבעיה שרוצים לפתור, מה הקהל, מה התקציב.</p>
+          <h3 data-i18n="about.step1.title">שיחה ראשונית</h3>
+          <p data-i18n="about.step1.desc">מבינים ביחד מה צריך לבנות — מה הבעיה שרוצים לפתור, מה הקהל, מה התקציב.</p>
         </div>
         <div class="hire-card">
           <div class="hire-icon">🎨</div>
-          <h3>עיצוב ובנייה</h3>
-          <p>אני בונה את המוצר — עיצוב UI, קוד, אינטגרציות. עדכונים שוטפים לאורך הדרך.</p>
+          <h3 data-i18n="about.step2.title">עיצוב ובנייה</h3>
+          <p data-i18n="about.step2.desc">אני בונה את המוצר — עיצוב UI, קוד, אינטגרציות. עדכונים שוטפים לאורך הדרך.</p>
         </div>
         <div class="hire-card">
           <div class="hire-icon">🚀</div>
-          <h3>פרסום ומסירה</h3>
-          <p>מעלים את המוצר לאוויר — Vercel, Google Play, Chrome Store — ומוסרים לך מוכן לשימוש.</p>
+          <h3 data-i18n="about.step3.title">פרסום ומסירה</h3>
+          <p data-i18n="about.step3.desc">מעלים את המוצר לאוויר — Vercel, Google Play, Chrome Store — ומוסרים לך מוכן לשימוש.</p>
         </div>
         <div class="hire-card">
           <div class="hire-icon">🛠️</div>
-          <h3>תמיכה אחרי</h3>
-          <p>נגמרה העבודה? לא בדיוק. אני זמין לתיקונים, שדרוגים ושאלות גם אחרי המסירה.</p>
+          <h3 data-i18n="about.step4.title">תמיכה אחרי</h3>
+          <p data-i18n="about.step4.desc">נגמרה העבודה? לא בדיוק. אני זמין לתיקונים, שדרוגים ושאלות גם אחרי המסירה.</p>
         </div>
       </div>
     </div>
@@ -210,11 +210,11 @@
   <!-- CTA -->
   <section style="padding: 3rem 1rem 5rem;">
     <div class="section-inner" style="text-align: center;">
-      <h2 class="section-title">רוצה לעבוד ביחד?</h2>
-      <p class="section-desc">יש לך רעיון? בואו נבנה אותו.</p>
+      <h2 class="section-title" data-i18n="about.cta.title">רוצה לעבוד ביחד?</h2>
+      <p class="section-desc" data-i18n="about.cta.subtitle">יש לך רעיון? בואו נבנה אותו.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
-        <a href="contact.html" class="btn btn-primary">צור קשר ←</a>
-        <a href="projects.html" class="btn btn-outline">הפרויקטים שלי ↓</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="about.cta.btn1">צור קשר ←</a>
+        <a href="projects.html" class="btn btn-outline" data-i18n="about.cta.btn2">הפרויקטים שלי ↓</a>
       </div>
     </div>
   </section>
@@ -227,14 +227,15 @@
         <span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools
       </p>
       <div class="footer-links">
-        <a href="index.html">← חזרה לאתר הראשי</a>
-        <a href="privacy-policy.html">מדיניות פרטיות</a>
-        <a href="terms.html">תנאי שימוש</a>
+        <a href="index.html" data-i18n="footer.back_home">← חזרה לאתר הראשי</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
         <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -42,11 +42,11 @@
     </a>
 
     <ul class="navbar-links" id="navLinks">
-      <li><a href="about.html">אודות</a></li>
-      <li><a href="projects.html">פרויקטים</a></li>
-      <li><a href="index.html#skills">כישורים</a></li>
-      <li><a href="index.html#hire">שירותים</a></li>
-      <li><a href="index.html" style="color:var(--orange);">← חזור לדף הבית</a></li>
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html#skills" data-i18n="nav.skills">כישורים</a></li>
+      <li><a href="index.html#hire" data-i18n="nav.services">שירותים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
     </ul>
 
     <button class="hamburger" id="hamburger" aria-label="תפריט">
@@ -57,13 +57,13 @@
   <!-- ===== יצירת קשר ===== -->
   <section id="contact" style="min-height: 85vh; padding-top: 120px;">
     <div class="section-inner">
-      <h2 class="section-title">צור קשר</h2>
-      <p class="section-desc">רוצה לדבר, להזמין עבודה, או סתם לשלוח שלום?</p>
+      <h2 class="section-title" data-i18n="contact.title">צור קשר</h2>
+      <p class="section-desc" data-i18n="contact.subtitle">רוצה לדבר, להזמין עבודה, או סתם לשלוח שלום?</p>
 
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>בואו נדבר 👋</h3>
-          <p>
+          <h3 data-i18n="contact.info.title">בואו נדבר 👋</h3>
+          <p data-i18n="contact.info.text">
             רוצה שאבנה לך אתר, כלי, תוסף או כל דבר אחר?
             יש לך שאלה, באג, או סתם רוצה להגיד שלום?
             אני שמח לשמוע!
@@ -72,11 +72,11 @@
           <div class="contact-links">
             <a href="https://mail.google.com/mail/?view=cm&to=levmishmish14@gmail.com" target="_blank" class="contact-link-item">
               <span class="contact-link-icon">📧</span>
-              <span>שלח מייל דרך Gmail</span>
+              <span data-i18n="contact.gmail">שלח מייל דרך Gmail</span>
             </a>
             <a href="mailto:levmishmish14@gmail.com" class="contact-link-item">
               <span class="contact-link-icon">💻</span>
-              <span>שלח מייל דרך תוכנת המייל</span>
+              <span data-i18n="contact.email_client">שלח מייל דרך תוכנת המייל</span>
             </a>
             <a href="https://github.com/hsbwnmwbgrnysywnwhtsqwt-lang" target="_blank" class="contact-link-item">
               <span class="contact-link-icon">🐙</span>
@@ -95,18 +95,18 @@
 
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-group">
-            <label for="name">שם</label>
-            <input type="text" id="name" name="name" placeholder="מה שמך?" required />
+            <label for="name" data-i18n="contact.form.name.label">שם</label>
+            <input type="text" id="name" name="name" placeholder="מה שמך?" required data-i18n-ph="contact.form.name.ph" />
           </div>
           <div class="form-group">
-            <label for="email">אימייל</label>
+            <label for="email" data-i18n="contact.form.email.label">אימייל</label>
             <input type="email" id="email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
-            <label for="message">הודעה</label>
-            <textarea id="message" name="message" placeholder="כתוב כאן..." required></textarea>
+            <label for="message" data-i18n="contact.form.message.label">הודעה</label>
+            <textarea id="message" name="message" placeholder="כתוב כאן..." required data-i18n-ph="contact.form.message.ph"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">שלח הודעה ✉️</button>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">שלח הודעה ✉️</button>
           <p class="form-msg" id="formMsg"></p>
         </form>
       </div>
@@ -122,14 +122,15 @@
         &nbsp;·&nbsp; Building small tools
       </p>
       <div class="footer-links">
-        <a href="index.html">← חזרה לאתר הראשי</a>
-        <a href="privacy-policy.html">מדיניות פרטיות</a>
-        <a href="terms.html">תנאי שימוש</a>
+        <a href="index.html" data-i18n="footer.back_home">← חזרה לאתר הראשי</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
         <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

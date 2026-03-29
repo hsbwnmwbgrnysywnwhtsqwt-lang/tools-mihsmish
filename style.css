@@ -1213,3 +1213,53 @@ footer span { color: var(--orange); font-weight: 600; }
   .projects-grid { grid-template-columns: 1fr; }
   .scroll-hint { display: none; }
 }
+
+
+/* ===== Language Switcher ===== */
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+[dir='ltr'] .lang-switcher {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.65);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 0.78rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.18s;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.lang-btn.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-right: 0.25rem;
+  }
+  .lang-btn {
+    padding: 2px 7px;
+    font-size: 0.72rem;
+  }
+}

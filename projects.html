@@ -74,11 +74,11 @@
     </a>
 
     <ul class="navbar-links" id="navLinks">
-      <li><a href="about.html">אודות</a></li>
-      <li><a href="index.html#skills">כישורים</a></li>
-      <li><a href="index.html#hire">שירותים</a></li>
-      <li><a href="contact.html">צור קשר</a></li>
-      <li><a href="index.html" style="color:var(--orange);">← חזור לדף הבית</a></li>
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="index.html#skills" data-i18n="nav.skills">כישורים</a></li>
+      <li><a href="index.html#hire" data-i18n="nav.services">שירותים</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
     </ul>
 
     <button class="hamburger" id="hamburger" aria-label="תפריט">
@@ -91,9 +91,9 @@
     <div class="beta-hero-glow"></div>
     <div class="beta-hero-inner">
       <div class="beta-game-icon">🛠️</div>
-      <div class="beta-label">הפרויקטים שלי</div>
-      <h1>דברים שבניתי</h1>
-      <p class="beta-tagline">אתרים, תוספים, אפליקציות וכלים — עם AI</p>
+      <div class="beta-label" data-i18n="projects.hero.label">הפרויקטים שלי</div>
+      <h1 data-i18n="projects.hero.title">דברים שבניתי</h1>
+      <p class="beta-tagline" data-i18n="projects.hero.tagline">אתרים, תוספים, אפליקציות וכלים — עם AI</p>
     </div>
   </section>
 
@@ -102,7 +102,7 @@
     <div class="section-inner">
       <div class="projects-grid">
 
-        <div class="projects-section-label"><span>הפרויקטים שלי</span></div>
+        <div class="projects-section-label"><span data-i18n="projects.my_label">הפרויקטים שלי</span></div>
 
         <!-- Video Controller -->
         <div class="project-card featured">
@@ -111,7 +111,7 @@
             <span class="project-ai-badge">AI</span>
           </div>
           <div class="project-name">Video Controller</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="projects.vc.desc">
             תוסף כרום שנותן שליטה מלאה על סרטונים בכל אתר — YouTube, Netflix, Udemy וכל אתר אחר.
             כולל שינוי מהירות השמעה, קיצורי מקלדת להרצה/עצירה/דילוג, ועוד פיצ'רים שימושיים.
             פורסם בחנות הכרום הרשמית עם אלפי משתמשים פעילים. נבנה כולו עם JavaScript ו-AI.
@@ -126,6 +126,7 @@
               href="https://chromewebstore.google.com/detail/video-controller/pddiobhmolcdlagkfkjafobnkemakmog?authuser=0&hl=iw"
               target="_blank"
               class="project-link"
+              data-i18n="project.chrome_store"
             >צפה בחנות הכרום ←</a>
           </div>
         </div>
@@ -156,7 +157,7 @@
             <span class="project-ai-badge">AI</span>
           </div>
           <div class="project-name">Memory Master</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="projects.mm.desc">
             משחק זיכרון אמוג'י ל-Android ו-iOS — מצא זוגות של אמוג'ים בזמן קצר ככל האפשר.
             כולל רמות קושי שונות, מעקב שיאים אישיים ועיצוב צבעוני ומהנה.
             נבנה עם Expo/React Native ופורסם ב-Google Play. גרסת iOS זמינה דרך TestFlight.
@@ -172,12 +173,34 @@
               target="_blank"
               class="project-link"
             >Google Play ←</a>
-            <a href="https://memory-master.tools-mishmish.com" target="_blank" class="project-link">האתר ←</a>
-            <a href="memory-master.html" class="project-link">פרטים נוספים ←</a>
+            <a href="https://memory-master.tools-mishmish.com" target="_blank" class="project-link" data-i18n="project.website">האתר ←</a>
+            <a href="memory-master.html" class="project-link" data-i18n="project.more_details">פרטים נוספים ←</a>
           </div>
         </div>
 
-        <div class="projects-section-label divider"><span>דברים שבניתי לאחרים</span></div>
+        <!-- King of Cheating -->
+        <div class="project-card featured">
+          <div class="project-card-top">
+            <div class="project-icon-img" style="width:45px;height:45px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:rgba(244,162,45,0.12);border-radius:12px;">❓</div>
+            <span class="project-ai-badge">AI</span>
+          </div>
+          <div class="project-name">King of Cheating</div>
+          <div class="project-desc" data-i18n="koc.desc">
+            משחק ירי מרובה שחקנים למובייל — ג'ויסטיק, כדורים, אויבים, קירות הגנה ומטבעות.
+            כולל חנות דמויות, מערכת לוח תוצאות ו-Firebase. בפיתוח.
+          </div>
+          <div class="project-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Socket.io</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">AI</span>
+          </div>
+          <div class="project-footer">
+            <span style="font-size:0.8rem;color:var(--text-xlight);" data-i18n="project.in_dev">🚧 בפיתוח</span>
+          </div>
+        </div>
+
+        <div class="projects-section-label divider"><span data-i18n="projects.others_label">דברים שבניתי לאחרים</span></div>
 
         <!-- Meitar Registration -->
         <div class="project-card featured">
@@ -186,7 +209,7 @@
             <span class="project-ai-badge">לאחרים</span>
           </div>
           <div class="project-name">אתר רישום — מיתר</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="projects.meitar.desc">
             דף נחיתה מרשים לבית ספר אלטרנטיבי — עם עיצוב מקצועי,
             מעקב Meta Pixel להמרות, טופס פניות ומצגת אינטראקטיבית.
             הדף ממיר מבקרים לפניות אמיתיות.
@@ -213,7 +236,7 @@
             <span class="project-ai-badge">לאחרים</span>
           </div>
           <div class="project-name">תן לי יד — אפליקציה</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="projects.tlyd.app.desc">
             אפליקציה ל-Android ו-iOS לחברי צוות של ארגון "תן לי יד" —
             דיווח פעילויות, צפייה בהיסטוריית עבודה, ניהול פרופיל וכניסה עם Google.
             נבנתה עם React Native ו-Expo, מחוברת ל-Supabase כ-backend.
@@ -242,7 +265,7 @@
             <span class="project-ai-badge">לאחרים</span>
           </div>
           <div class="project-name">תן לי יד — אתר ניהול</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="projects.tlyd.mgmt.desc">
             מערכת ניהול ווב מלאה למנהל הארגון — דשבורד עם סיכום פעילויות,
             דוח שכר חודשי אוטומטי, ניהול חיובי לקוחות, מסגרות וצוות.
             כל מדריך מקבל קישור ייחודי לדיווח עצמאי. נבנה עם Next.js ו-Supabase.
@@ -267,11 +290,11 @@
   <!-- CTA -->
   <section style="padding: 3rem 1rem 5rem;">
     <div class="section-inner" style="text-align: center;">
-      <h2 class="section-title">רוצה שאבנה לך משהו?</h2>
-      <p class="section-desc">יש לך רעיון? בואו נדבר.</p>
+      <h2 class="section-title" data-i18n="projects.cta.title">רוצה שאבנה לך משהו?</h2>
+      <p class="section-desc" data-i18n="projects.cta.subtitle">יש לך רעיון? בואו נדבר.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
-        <a href="contact.html" class="btn btn-primary">צור קשר ←</a>
-        <a href="index.html#hire" class="btn btn-outline">השירותים שלי ↓</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="projects.cta.btn1">צור קשר ←</a>
+        <a href="index.html#hire" class="btn btn-outline" data-i18n="projects.cta.btn2">השירותים שלי ↓</a>
       </div>
     </div>
   </section>
@@ -284,14 +307,15 @@
         <span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools
       </p>
       <div class="footer-links">
-        <a href="index.html">← חזרה לאתר הראשי</a>
-        <a href="privacy-policy.html">מדיניות פרטיות</a>
-        <a href="terms.html">תנאי שימוש</a>
+        <a href="index.html" data-i18n="footer.back_home">← חזרה לאתר הראשי</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
         <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
