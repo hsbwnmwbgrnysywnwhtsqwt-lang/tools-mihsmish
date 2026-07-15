@@ -57,8 +57,7 @@ const TRANSLATIONS = {
     'mishmish.site.name': 'אתר mishmish',
     'mishmish.site.desc': 'האתר הזה! נבנה עם HTML, CSS, JS ועיצוב שנוצר עם AI. כל דבר — מהלוגו ועד הקוד.',
     'mm.card.desc':       'משחק זיכרון אמוג\'י ל-Android — מצא זוגות, אתגר את עצמך. נבנה לחלוטין עם AI ופורסם ב-Google Play.',
-    'meitar.name':        'אתר רישום — מיתר',
-    'meitar.desc':        'דף נחיתה מרשים לבית ספר אלטרנטיבי — עם עיצוב מקצועי, מעקב Meta Pixel להמרות, טופס פניות ומצגת אינטראקטיבית.',
+    'tikunchik.desc':     'אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — "susu" הופך ל"דודו" בלחיצת קיצור אחת. נבנה עם Swift ו-SwiftUI.',
     'tlyd.app.name':      'תן לי יד — אפליקציה',
     'tlyd.app.desc':      'אפליקציית Android ו-iOS לחברי צוות של ארגון "תן לי יד" — דיווח פעילויות, צפייה בהיסטוריה וניהול פרופיל.',
     'tlyd.mgmt.name':     'תן לי יד — אתר ניהול',
@@ -70,6 +69,7 @@ const TRANSLATIONS = {
     'project.github_dl':      'רוצה להוריד או לצפות בגיטהב←',
     'project.website':        'האתר ←',
     'project.more_details':   'פרטים נוספים ←',
+    'project.download_mac':   'הורד ל-macOS ←',
     'project.view_site':      'צפה באתר ←',
     'project.internal_only':  'מיועד לצוות תן לי יד בלבד',
 
@@ -138,7 +138,7 @@ const TRANSLATIONS = {
     'projects.cta.btn2':     'השירותים שלי ↓',
     'projects.vc.desc':      'תוסף כרום שנותן שליטה מלאה על סרטונים בכל אתר — YouTube, Netflix, Udemy וכל אתר אחר. כולל שינוי מהירות השמעה, קיצורי מקלדת להרצה/עצירה/דילוג, ועוד פיצ\'רים שימושיים. פורסם בחנות הכרום הרשמית עם אלפי משתמשים פעילים.',
     'projects.mm.desc':      'משחק זיכרון אמוג\'י ל-Android ו-iOS — מצא זוגות של אמוג\'ים בזמן קצר ככל האפשר. כולל רמות קושי שונות, מעקב שיאים אישיים ועיצוב צבעוני ומהנה. נבנה עם Expo/React Native ופורסם ב-Google Play.',
-    'projects.meitar.desc':  'דף נחיתה מרשים לבית ספר אלטרנטיבי — עם עיצוב מקצועי, מעקב Meta Pixel להמרות, טופס פניות ומצגת אינטראקטיבית. הדף ממיר מבקרים לפניות אמיתיות.',
+    'projects.tikunchik.desc': 'אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — "susu" הופך ל"דודו" בלחיצת קיצור אחת. במקום המרה עיוורת, הוא בודק כל מילה מול בודק האיות של macOS בעברית ובאנגלית ומחליט לבד לאיזה כיוון להמיר. מתקן ישירות בשדה הטקסט, ויודע גם להחליף את שפת ההקלדה באותה לחיצה. נבנה עם Swift ו-SwiftUI.',
     'projects.tlyd.app.desc':'אפליקציה ל-Android ו-iOS לחברי צוות של ארגון "תן לי יד" — דיווח פעילויות, צפייה בהיסטוריית עבודה, ניהול פרופיל וכניסה עם Google. נבנתה עם React Native ו-Expo.',
     'projects.tlyd.mgmt.desc':'מערכת ניהול ווב מלאה למנהל הארגון — דשבורד עם סיכום פעילויות, דוח שכר חודשי אוטומטי, ניהול חיובי לקוחות, מסגרות וצוות. נבנה עם Next.js ו-Supabase.',
 
@@ -169,8 +169,6 @@ const TRANSLATIONS = {
     'mm.s4.title':      'מתקדמים ברמות',
     'mm.s4.desc':       'כל רמה קשה יותר — יותר כרטיסים, יותר אמוג\'ים, יותר אתגר!',
 
-    // --- King of Cheating ---
-    'koc.desc':         'משחק ירי מרובה שחקנים למובייל — ג\'ויסטיק, כדורים, אויבים, קירות הגנה ומטבעות. כולל חנות דמויות, מערכת לוח תוצאות ו-Firebase. בפיתוח.',
     'project.in_dev':   '🚧 בפיתוח',
 
     // --- Blog page ---
@@ -230,8 +228,7 @@ const TRANSLATIONS = {
     'mishmish.site.name': 'mishmish Website',
     'mishmish.site.desc': 'This site! Built with HTML, CSS, JS and AI-generated design. Everything — from the logo to the code.',
     'mm.card.desc':       'An emoji memory game for Android — find pairs, challenge yourself. Built entirely with AI and published on Google Play.',
-    'meitar.name':        'Registration Site — Meitar',
-    'meitar.desc':        'A stunning landing page for an alternative school — professional design, Meta Pixel conversion tracking, contact form and interactive slideshow.',
+    'tikunchik.desc':     'A macOS menu bar app that fixes text typed in the wrong keyboard layout — one shortcut and the gibberish becomes what you meant. Built with Swift and SwiftUI.',
     'tlyd.app.name':      'Ten Li Yad — App',
     'tlyd.app.desc':      'Android & iOS app for the "Ten Li Yad" org team — activity reporting, history viewing and profile management.',
     'tlyd.mgmt.name':     'Ten Li Yad — Management',
@@ -243,6 +240,7 @@ const TRANSLATIONS = {
     'project.github_dl':      'Download or view on GitHub ←',
     'project.website':        'Website ←',
     'project.more_details':   'More Details ←',
+    'project.download_mac':   'Download for macOS ←',
     'project.view_site':      'View Site ←',
     'project.internal_only':  'For Ten Li Yad team only',
 
@@ -311,7 +309,7 @@ const TRANSLATIONS = {
     'projects.cta.btn2':     'My Services ↓',
     'projects.vc.desc':      'A Chrome extension that gives you full control over videos on any site — YouTube, Netflix, Udemy and more. Includes playback speed control, keyboard shortcuts for play/pause/skip, and more useful features. Published on the official Chrome Web Store with thousands of active users.',
     'projects.mm.desc':      'An emoji memory game for Android & iOS — find pairs as quickly as possible. Includes multiple difficulty levels, personal record tracking and colorful fun design. Built with Expo/React Native and published on Google Play.',
-    'projects.meitar.desc':  'A stunning landing page for an alternative school — professional design, Meta Pixel conversion tracking, contact form and interactive slideshow. The page converts visitors into real leads.',
+    'projects.tikunchik.desc': 'A macOS menu bar app that fixes text typed in the wrong keyboard layout — one shortcut and the gibberish becomes what you meant. Rather than mapping blindly, it checks each word against the macOS spell checker in both Hebrew and English and decides which way to convert. It fixes the text in place, and can switch your input language in the same keystroke. Built with Swift and SwiftUI.',
     'projects.tlyd.app.desc':'Android & iOS app for the "Ten Li Yad" NGO team — activity reporting, work history viewing, profile management and Google login. Built with React Native and Expo.',
     'projects.tlyd.mgmt.desc':'Full web management system for the org admin — activity summary dashboard, automatic monthly payroll report, client billing management, schedules and team management. Built with Next.js and Supabase.',
 
@@ -342,8 +340,6 @@ const TRANSLATIONS = {
     'mm.s4.title':      'Level Up',
     'mm.s4.desc':       'Each level is harder — more cards, more emojis, more challenge!',
 
-    // --- King of Cheating ---
-    'koc.desc':       'A multiplayer mobile shooter — joystick, bullets, enemies, protective walls and coins. Includes a character shop, leaderboard system and Firebase. In development.',
     'project.in_dev': '🚧 In Development',
 
     // --- Blog page ---

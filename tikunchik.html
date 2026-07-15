@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tikunchik | mishmish — מתקן טקסט שהוקלד בשפה הלא נכונה ב-macOS</title>
+  <meta name="description" content="Tikunchik — אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה. הופך 'susu' ל'דודו' בקיצור מקלדת אחד. נבנה על ידי מיכאל לב (mishmish)." />
+  <meta name="keywords" content="tikunchik, תיקונצ'יק, תיקון שפה, הוקלד בשפה הלא נכונה, החלפת שפה מקלדת, עברית אנגלית, macOS, menu bar app, swift, mishmish, מישמיש, מיכאל לב, michael lev, levmishmish" />
+  <link rel="canonical" href="https://tikunchik.tools-mishmish.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tikunchik — תיקון טקסט שהוקלד בשפה הלא נכונה" />
+  <meta property="og:description" content="אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — בקיצור מקלדת אחד." />
+  <meta property="og:image" content="https://www.tools-mishmish.com/tikunchik-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tikunchik.tools-mishmish.com/" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="mishmish" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tikunchik — תיקון טקסט שהוקלד בשפה הלא נכונה" />
+  <meta name="twitter:description" content="אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — בקיצור מקלדת אחד." />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/tikunchik-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo-icon-nobg.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo-icon-nobg.png" />
+  <meta name="google-adsense-account" content="ca-pub-3119132036372710">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3119132036372710" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="logo-icon-nobg.png" alt="mishmish לוגו" />
+      <span>mishmish</span>
+    </a>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="beta-hero">
+    <div class="beta-hero-glow"></div>
+    <div class="beta-hero-inner">
+      <img src="tikunchik-logo.png" alt="Tikunchik" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; display: block; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(244,162,45,0.3));" />
+      <div class="beta-label">זמין להורדה — macOS</div>
+      <h1>Tikunchik</h1>
+      <p class="beta-tagline">הקלדת "susu" והתכוונת ל"דודו"? קיצור אחד ונגמר.</p>
+      <p class="beta-desc">
+        אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה.<br />
+        בלי למחוק, בלי להקליד מחדש — סימון, קיצור מקלדת, והטקסט מתוקן במקום.
+      </p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="Tikunchik.dmg" download class="btn btn-primary" style="font-size: 1rem; padding: 0.8rem 1.8rem;">
+          הורד ל-macOS ←
+        </a>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-xlight);">
+        קובץ DMG · 1.5MB · חתום ומאושר ע"י Apple
+      </p>
+    </div>
+  </section>
+
+  <!-- מה זה הפרויקט -->
+  <section class="beta-about-section">
+    <div class="section-inner">
+      <h2 class="section-title">מה זה Tikunchik?</h2>
+      <p class="section-desc">כל מי שעובד בשתי שפות מכיר את זה — התחלת להקליד ורק אחרי משפט שלם שמת לב שהמקלדת הייתה בשפה השנייה.</p>
+
+      <div class="beta-features">
+        <div class="beta-feature">
+          <div class="beta-feature-icon">✨</div>
+          <h3>מזהה לבד את הכיוון</h3>
+          <p>כל מילה נבדקת מול בודק האיות של macOS בעברית ובאנגלית, והאפליקציה מחליטה לבד מה צריך תיקון ולאיזה כיוון — בלי שתגיד לה.</p>
+        </div>
+        <div class="beta-feature">
+          <div class="beta-feature-icon">⚡</div>
+          <h3>מתקן במקום</h3>
+          <p>הטקסט מתוקן ישירות בשדה שבו הוא נמצא, בכל אפליקציה. סמן את מה שרוצים לתקן, או פשוט תקן את כל השדה.</p>
+        </div>
+        <div class="beta-feature">
+          <div class="beta-feature-icon">🎯</div>
+          <h3>לא הורס טקסט תקין</h3>
+          <p>מילים שכבר כתובות נכון נשארות כמו שהן — גם במשפט מעורבב עברית ואנגלית.</p>
+        </div>
+        <div class="beta-feature">
+          <div class="beta-feature-icon">🚀</div>
+          <h3>יושב בשקט בשורת התפריטים</h3>
+          <p>נטען עם המחשב, לא תופס מקום ב-Dock, ומודיע לך בקצרה מה תוקן.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- איך זה עובד -->
+  <section style="padding: 3rem 1rem;">
+    <div class="section-inner">
+      <h2 class="section-title">איך זה עובד?</h2>
+      <p class="section-desc">ארבעה שלבים, שניים מהם קורים לבד.</p>
+
+      <div class="hire-grid" style="margin-top: 2rem;">
+        <div class="hire-card">
+          <div class="hire-icon">1️⃣</div>
+          <h3>שמת לב שהתבלבלת</h3>
+          <p>הקלדת משפט שלם והמקלדת הייתה בשפה הלא נכונה.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">2️⃣</div>
+          <h3>סמן ולחץ ⌃⇧K</h3>
+          <p>סמן את הטקסט המשובש — או אל תסמן כלום, וכל השדה יתוקן.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">3️⃣</div>
+          <h3>Tikunchik מזהה מה לתקן</h3>
+          <p>הוא עובר מילה־מילה, מחליט מה משובש ולאיזה כיוון להמיר, ומחליף את הטקסט במקום.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">4️⃣</div>
+          <h3>רוצה גם להחליף שפה?</h3>
+          <p>⌃⌥Space מתקן את הטקסט וגם מעביר את המקלדת לשפה הבאה, כדי שתמשיך להקליד נכון.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo" src="logo-full-nobg.png" alt="mishmish" />
+      <p>
+        <span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools
+      </p>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer.back_home">← חזרה לאתר הראשי</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
+        <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
