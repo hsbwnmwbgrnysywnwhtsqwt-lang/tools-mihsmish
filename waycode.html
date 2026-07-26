@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WayCode | mishmish — סוכן קוד AI שמדבר עברית, בתוך VS Code</title>
+  <meta name="description" content="WayCode — תוסף ל-VS Code שהופך את סרגל הצד לסוכן קוד אמיתי. כותבים בעברית, והוא קורא את הפרויקט, מתקן קבצים, מריץ בדיקות ומתקן שגיאות. נבנה על ידי מיכאל לב (mishmish)." />
+  <meta name="keywords" content="waycode, וויקוד, סוכן קוד, AI coding agent, vs code extension, תוסף vs code, כלי AI בעברית, ai agent hebrew, claude, gpt, ollama, copilot alternative, mishmish, מישמיש, מיכאל לב, michael lev, levmishmish" />
+  <link rel="canonical" href="https://www.tools-mishmish.com/waycode.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="WayCode — סוכן קוד AI שמדבר עברית, בתוך VS Code" />
+  <meta property="og:description" content="תוסף ל-VS Code שקורא את הפרויקט שלך, כותב ומתקן קוד, מריץ בדיקות ומתקן שגיאות — ומדבר איתך בשפה שלך." />
+  <meta property="og:image" content="https://www.tools-mishmish.com/weycode-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tools-mishmish.com/waycode.html" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="mishmish" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WayCode — סוכן קוד AI שמדבר עברית, בתוך VS Code" />
+  <meta name="twitter:description" content="תוסף ל-VS Code שקורא את הפרויקט שלך, כותב ומתקן קוד, מריץ בדיקות ומתקן שגיאות — ומדבר איתך בשפה שלך." />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/weycode-logo.png" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WayCode",
+    "alternateName": ["וויקוד", "Tools-Mishmish WayCode"],
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows, macOS, Linux",
+    "url": "https://www.tools-mishmish.com/waycode.html",
+    "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=tools-mishmish.waycode",
+    "image": "https://www.tools-mishmish.com/weycode-logo.png",
+    "softwareVersion": "1.0",
+    "description": "WayCode — תוסף ל-VS Code שהופך חלונית צ'אט לסוכן קוד אמיתי. כותבים לו בעברית מה צריך, והוא קורא את הפרויקט, מחפש בקוד, כותב ומתקן קבצים, מריץ בדיקות ולינטר, קורא את השגיאות ומתקן אותן. לפני כל שינוי מסוכן הוא מציג diff ומחכה לאישור. עובד עם Claude, GPT, Ollama מקומי או Claude Code CLI.",
+    "featureList": [
+      "מבין ועונה בעברית ובכל שפה אחרת, עם פריסת RTL אוטומטית",
+      "מכיר את כל הפרויקט — עץ הקבצים, המניפסטים והשפות שזוהו",
+      "לולאת תכנון ביצוע אימות ותיקון עם הרצת בדיקות ולינטר",
+      "תצוגת diff ואישור לפני כל שינוי מסוכן, כולל מצב תכנון לקריאה בלבד",
+      "תמיכה ב-Claude, GPT, Ollama מקומי ו-Claude Code CLI"
+    ],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ILS" },
+    "author": { "@id": "https://www.tools-mishmish.com/#organization" },
+    "publisher": { "@id": "https://www.tools-mishmish.com/#organization" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo-icon-nobg.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo-icon-nobg.png" />
+  <meta name="google-adsense-account" content="ca-pub-3119132036372710">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3119132036372710" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="logo-icon-nobg.png" alt="mishmish לוגו" />
+      <span>mishmish</span>
+    </a>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="beta-hero">
+    <div class="beta-hero-glow"></div>
+    <div class="beta-hero-inner">
+      <img src="weycode-logo.png" alt="WayCode" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; display: block; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(244,162,45,0.3));" />
+      <div class="beta-label">זמין ב-VS Code Marketplace</div>
+      <h1>WayCode</h1>
+      <p class="beta-tagline">סוכן קוד AI שמדבר איתך בעברית — ישירות בסרגל הצד של VS Code.</p>
+      <p class="beta-desc">
+        כותבים לו מה צריך, והוא קורא את הפרויקט, מחפש בקוד, כותב ומתקן קבצים,<br />
+        מריץ בדיקות ולינטר, קורא את השגיאות ומתקן אותן — עד שזה עובד.
+      </p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="https://marketplace.visualstudio.com/items?itemName=tools-mishmish.waycode" target="_blank" class="btn btn-primary" style="font-size: 1rem; padding: 0.8rem 1.8rem;">
+          התקן מה-Marketplace ←
+        </a>
+        <a href="https://github.com/hsbwnmwbgrnysywnwhtsqwt-lang/waycode" target="_blank" class="btn btn-outline" style="font-size: 1rem; padding: 0.8rem 1.8rem;">
+          צפה בקוד בגיטהב ←
+        </a>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-xlight);">
+        ל-VS Code 1.85+ · קוד פתוח (MIT) · אפשר להריץ בחינם עם מודל מקומי
+      </p>
+    </div>
+  </section>
+
+  <!-- מה זה הפרויקט -->
+  <section class="beta-about-section">
+    <div class="section-inner">
+      <h2 class="section-title">מה זה WayCode?</h2>
+      <p class="section-desc">רוב כלי ה-AI לקוד מציעים לך הצעה ועוצרים. WayCode לא עוצר — הוא עורך, מריץ, קורא את השגיאה ומתקן.</p>
+
+      <div class="beta-features">
+        <div class="beta-feature">
+          <div class="beta-feature-icon">🌍</div>
+          <h3>מדבר בשפה שלך</h3>
+          <p>כותבים בעברית — הוא מבין ועונה בעברית. הצ'אט מיושר לימין אוטומטית, והקוד נשאר משמאל לימין כמו שצריך.</p>
+        </div>
+        <div class="beta-feature">
+          <div class="beta-feature-icon">🧠</div>
+          <h3>מכיר את כל הפרויקט</h3>
+          <p>כל משימה מתחילה מתמונת מצב של עץ הקבצים, קבצי ההגדרות והשפות שזוהו. אין צורך להעתיק לו קבצים.</p>
+        </div>
+        <div class="beta-feature">
+          <div class="beta-feature-icon">🛡️</div>
+          <h3>אתה נשאר בשליטה</h3>
+          <p>תצוגת diff לפני כל כתיבה, הפקודה המדויקת לפני כל הרצה, וארבעה מצבי אישור — כולל מצב תכנון שלא נוגע בכלום.</p>
+        </div>
+        <div class="beta-feature">
+          <div class="beta-feature-icon">🔌</div>
+          <h3>כל ספק AI</h3>
+          <p>Claude, GPT, מודל מקומי דרך Ollama או מנוי Claude Code שכבר יש לך. בשתי האפשרויות האחרונות — בלי API key.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- איך זה עובד -->
+  <section style="padding: 3rem 1rem;">
+    <div class="section-inner">
+      <h2 class="section-title">איך זה עובד?</h2>
+      <p class="section-desc">ארבעה שלבים בלולאה — עד שהקוד באמת עובד.</p>
+
+      <div class="hire-grid" style="margin-top: 2rem;">
+        <div class="hire-card">
+          <div class="hire-icon">1️⃣</div>
+          <h3>מבין לפני שנוגע</h3>
+          <p>קורא את הקבצים הרלוונטיים ומחפש בקוד. הוא לא עורך קוד שהוא לא קרא, ולא ממציא קבצים או פונקציות.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">2️⃣</div>
+          <h3>מבצע</h3>
+          <p>יוצר ועורך קבצים, מריץ פקודות בטרמינל. כל שינוי מסוכן עובר דרך תצוגת diff שאתה מאשר.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">3️⃣</div>
+          <h3>מאמת</h3>
+          <p>אחרי כל שינוי הוא מריץ את הבדיקות, הבילד או הלינטר של הפרויקט — ולא מסתפק בלהצהיר שזה עובד.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">4️⃣</div>
+          <h3>מתקן וחוזר</h3>
+          <p>אם האימות נכשל, הוא קורא את השגיאה, מבין איפה היא, מתקן נקודתית ומריץ שוב — עד שזה עובר.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ספקים -->
+  <section class="beta-about-section">
+    <div class="section-inner">
+      <h2 class="section-title">עם מה הוא עובד?</h2>
+      <p class="section-desc">בוחרים ספק אחד — או שניים, כשמודל אחד מדבר איתך ומודל אחר כותב את הקוד.</p>
+
+      <div class="hire-grid" style="margin-top: 2rem;">
+        <div class="hire-card">
+          <div class="hire-icon">🧠</div>
+          <h3>Claude</h3>
+          <p>ה-API של Anthropic, עם תמיכה מלאה בכלים. דורש API key.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">⚡</div>
+          <h3>GPT</h3>
+          <p>ה-API של OpenAI, וגם כל שרת תואם — LM Studio, Groq, Together או Azure.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">🏠</div>
+          <h3>Ollama מקומי</h3>
+          <p>מודל שרץ אצלך על המחשב. בלי API key, בלי עלות, והכל נשאר אצלך.</p>
+        </div>
+        <div class="hire-card">
+          <div class="hire-icon">💻</div>
+          <h3>Claude Code CLI</h3>
+          <p>משתמש במנוי Claude שכבר יש לך דרך ה-CLI המותקן — בלי מפתח נוסף.</p>
+        </div>
+      </div>
+
+      <div class="hire-cta">
+        <p>קוד פתוח, רישיון MIT — אפשר להוריד, לשנות ולבנות מזה משהו משלך.</p>
+        <a href="https://marketplace.visualstudio.com/items?itemName=tools-mishmish.waycode" target="_blank" class="btn btn-primary">התקן את WayCode ←</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo" src="logo-full-nobg.png" alt="mishmish" />
+      <p>
+        <span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools
+      </p>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer.back_home">← חזרה לאתר הראשי</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
+        <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
