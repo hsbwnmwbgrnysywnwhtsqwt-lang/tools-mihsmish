@@ -11,7 +11,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="WayCode — סוכן קוד AI שמדבר עברית, בתוך VS Code" />
   <meta property="og:description" content="תוסף ל-VS Code שקורא את הפרויקט שלך, כותב ומתקן קוד, מריץ בדיקות ומתקן שגיאות — ומדבר איתך בשפה שלך." />
-  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/weycode-logo.png" />
+  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/waycode-vscode.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.tools-mishmish.com/waycode.html" />
   <meta property="og:locale" content="he_IL" />
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="WayCode — סוכן קוד AI שמדבר עברית, בתוך VS Code" />
   <meta name="twitter:description" content="תוסף ל-VS Code שקורא את הפרויקט שלך, כותב ומתקן קוד, מריץ בדיקות ומתקן שגיאות — ומדבר איתך בשפה שלך." />
-  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/weycode-logo.png" />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/waycode-vscode.png" />
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -34,7 +34,7 @@
     "operatingSystem": "Windows, macOS, Linux",
     "url": "https://www.tools-mishmish.com/waycode.html",
     "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=tools-mishmish.waycode",
-    "image": "https://www.tools-mishmish.com/assets/images/weycode-logo.png",
+    "image": "https://www.tools-mishmish.com/assets/images/project-screenshots/waycode-vscode.png",
     "softwareVersion": "1.0",
     "description": "WayCode — תוסף ל-VS Code שהופך חלונית צ'אט לסוכן קוד אמיתי. כותבים לו בעברית מה צריך, והוא קורא את הפרויקט, מחפש בקוד, כותב ומתקן קבצים, מריץ בדיקות ולינטר, קורא את השגיאות ומתקן אותן. לפני כל שינוי מסוכן הוא מציג diff ומחכה לאישור. עובד עם Claude, GPT, Ollama מקומי או Claude Code CLI.",
     "featureList": [
@@ -110,14 +110,22 @@
       <p>
         WayCode מוצג כפרויקט מוצר: יש לו דף נחיתה, עמוד התקנה ב-Marketplace, קוד פתוח, ותיאור מלא של הבעיה שהוא פותר. במקום להראות רק לוגו, הדף מסביר את זרימת העבודה האמיתית: מבינים משימה, קוראים קוד, עורכים, מריצים בדיקות וחוזרים לתיקון.
       </p>
-      <div class="project-showcase-strip">
-        <div class="project-showcase-media">
-          <img src="assets/images/weycode-logo-240.png" alt="WayCode" loading="lazy" decoding="async" />
+      <div class="project-page-carousel" data-page-carousel>
+        <button class="project-carousel-btn prev" type="button" data-carousel-move="-1" aria-label="תמונה קודמת">‹</button>
+        <div class="project-page-carousel-track" data-carousel-track>
+          <figure class="project-page-slide" data-carousel-slide>
+            <img src="assets/images/project-screenshots/waycode-vscode.png" alt="מסך הצ'אט של WayCode בתוך VS Code" fetchpriority="high" decoding="async" />
+            <figcaption>סוכן קוד בתוך סביבת הפיתוח</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide>
+            <img src="assets/images/project-screenshots/waycode-settings.png" alt="הגדרות ספקים, מודלים והרשאות ב-WayCode" loading="lazy" decoding="async" />
+            <figcaption>בחירת מודלים, שפה והרשאות</figcaption>
+          </figure>
         </div>
-        <div class="project-showcase-copy">
-          <span>מה חשוב לראות בפרויקט</span>
-          <h3>לא עוד צ'אט ליד הקוד, אלא סוכן שעובד בתוך הפרויקט</h3>
-          <p>הדף מדגיש את היכולת לקרוא קבצים, להציג diff, להריץ פקודות ולהישאר בשליטת המשתמש לפני כל פעולה מסוכנת.</p>
+        <button class="project-carousel-btn next" type="button" data-carousel-move="1" aria-label="תמונה הבאה">›</button>
+        <div class="project-carousel-dots">
+          <button class="project-carousel-dot active" type="button" data-carousel-dot aria-label="תמונה 1"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 2"></button>
         </div>
       </div>
     </div>

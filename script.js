@@ -110,7 +110,18 @@ const PROJECT_DETAILS = {
       short: 'תוסף VS Code שמכניס סוכן קוד דובר עברית לתוך סביבת הפיתוח.',
       long: 'WayCode הוא תוסף ל-VS Code שמאפשר לבקש תיקונים ושינויים בעברית ישירות מתוך סביבת הפיתוח. הוא קורא את מבנה הפרויקט, מחפש בקבצים, כותב ומתקן קוד, מריץ בדיקות או lint כשצריך, ומציג אישור לפני פעולות מסוכנות. הוא נבנה ב-TypeScript ומיועד לעבודה עם מודלים כמו GPT, Claude, Ollama מקומי או מנוי Claude Code קיים.',
       tags: ['VS Code', 'TypeScript', 'AI'],
-      screenshots: []
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/waycode-vscode.png',
+          alt: 'מסך הצ\'אט של WayCode בתוך VS Code',
+          caption: 'סוכן קוד בתוך סביבת הפיתוח'
+        },
+        {
+          src: 'assets/images/project-screenshots/waycode-settings.png',
+          alt: 'מסך ההגדרות של WayCode',
+          caption: 'בחירת מודלים, שפה והרשאות'
+        }
+      ]
     },
     'memory-master': {
       title: 'Memory Master',
@@ -188,7 +199,18 @@ const PROJECT_DETAILS = {
       short: 'A VS Code extension that brings a Hebrew-speaking coding agent into the editor.',
       long: 'WayCode lets users request fixes and changes in Hebrew from inside VS Code. It reads the project structure, searches files, writes and fixes code, runs tests or lint when needed, and asks before risky actions. It is built in TypeScript and can work with GPT, Claude, local Ollama models or an existing Claude Code subscription.',
       tags: ['VS Code', 'TypeScript', 'AI'],
-      screenshots: []
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/waycode-vscode.png',
+          alt: 'WayCode chat inside VS Code',
+          caption: 'A coding agent inside the editor'
+        },
+        {
+          src: 'assets/images/project-screenshots/waycode-settings.png',
+          alt: 'WayCode settings screen',
+          caption: 'Model, language and approval controls'
+        }
+      ]
     },
     'memory-master': {
       title: 'Memory Master',
