@@ -130,14 +130,24 @@ const PROJECT_DETAILS = {
       tags: ['Expo', 'React Native', 'Google Play', 'AI'],
       screenshots: [
         {
-          src: 'assets/images/project-screenshots/memory-master-home.png',
-          alt: 'מסך הבית של Memory Master',
+          src: 'assets/images/project-screenshots/memory-master-play-home.jpg',
+          alt: 'מסך הבית של Memory Master מתוך Google Play',
           caption: 'בחירת ערכות ואתגר יומי'
         },
         {
-          src: 'assets/images/project-screenshots/memory-master-game.png',
-          alt: 'לוח המשחק של Memory Master',
+          src: 'assets/images/project-screenshots/memory-master-play-board.jpg',
+          alt: 'לוח המשחק של Memory Master מתוך Google Play',
           caption: 'לוח משחק פעיל'
+        },
+        {
+          src: 'assets/images/project-screenshots/memory-master-play-store.jpg',
+          alt: 'החנות של Memory Master מתוך Google Play',
+          caption: 'חנות חבילות ופרסים'
+        },
+        {
+          src: 'assets/images/project-screenshots/memory-master-play-settings.jpg',
+          alt: 'ההגדרות של Memory Master מתוך Google Play',
+          caption: 'שפה, צלילים ונגישות'
         }
       ]
     },
@@ -230,14 +240,24 @@ const PROJECT_DETAILS = {
       tags: ['Expo', 'React Native', 'Google Play', 'AI'],
       screenshots: [
         {
-          src: 'assets/images/project-screenshots/memory-master-home.png',
-          alt: 'Memory Master home screen',
+          src: 'assets/images/project-screenshots/memory-master-play-home.jpg',
+          alt: 'Memory Master home screen from Google Play',
           caption: 'Theme selection and daily challenge'
         },
         {
-          src: 'assets/images/project-screenshots/memory-master-game.png',
-          alt: 'Memory Master game board',
+          src: 'assets/images/project-screenshots/memory-master-play-board.jpg',
+          alt: 'Memory Master game board from Google Play',
           caption: 'An active game board'
+        },
+        {
+          src: 'assets/images/project-screenshots/memory-master-play-store.jpg',
+          alt: 'Memory Master store from Google Play',
+          caption: 'Card packs and rewards store'
+        },
+        {
+          src: 'assets/images/project-screenshots/memory-master-play-settings.jpg',
+          alt: 'Memory Master settings from Google Play',
+          caption: 'Language, sound and accessibility controls'
         }
       ]
     },
