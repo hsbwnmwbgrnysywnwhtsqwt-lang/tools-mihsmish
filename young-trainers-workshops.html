@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>סדנאות קיץ מאלפים צעירים | mishmish</title>
+  <meta name="description" content="סדנאות קיץ מאלפים צעירים — דף הרשמה ותשלום לתן לי יד, עם בחירת מחזור, פרטי ילד והורה, תקנון ושמירה ל-Google Sheets." />
+  <link rel="canonical" href="https://www.tools-mishmish.com/young-trainers-workshops.html" />
+  <meta property="og:title" content="סדנאות קיץ מאלפים צעירים" />
+  <meta property="og:description" content="דף הרשמה ותשלום לסדנאות קיץ, עם שמירת פרטים ל-Google Sheets דרך Google Apps Script." />
+  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/young-trainers-registration-hero.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tools-mishmish.com/young-trainers-workshops.html" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="mishmish" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="סדנאות קיץ מאלפים צעירים" />
+  <meta name="twitter:description" content="דף הרשמה ותשלום לסדנאות קיץ, עם שמירת פרטים ל-Google Sheets דרך Google Apps Script." />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/young-trainers-registration-hero.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/logo-icon-nobg.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-icon-nobg.png" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo-icon-nobg-76.png" width="38" height="38" alt="mishmish לוגו" decoding="async" />
+      <span>mishmish</span>
+    </a>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="project-detail-hero">
+    <div class="project-detail-hero-inner">
+      <div>
+        <span class="project-detail-label">פרויקט ללקוח</span>
+        <h1 class="project-detail-title">סדנאות קיץ מאלפים צעירים</h1>
+        <p class="project-detail-summary">
+          דף הרשמה ותשלום לסדנאות הקיץ של תן לי יד: בחירת מחזור, פרטי ילד והורה,
+          אישור תקנון, מעבר לתשלום ושמירה מסודרת של ההרשמה.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Google Apps Script</span>
+          <span class="tag">Google Sheets</span>
+        </div>
+      </div>
+
+      <div class="project-page-carousel" data-page-carousel>
+        <button class="project-carousel-btn prev" type="button" data-carousel-move="-1" aria-label="תמונה קודמת">‹</button>
+        <div class="project-page-carousel-track" data-carousel-track>
+          <figure class="project-page-slide" data-carousel-slide>
+            <img src="assets/images/project-screenshots/young-trainers-registration-hero.png" alt="דף הפתיחה של סדנאות קיץ מאלפים צעירים" fetchpriority="high" decoding="async" />
+            <figcaption>דף פתיחה והרשמה לסדנאות</figcaption>
+          </figure>
+        </div>
+        <button class="project-carousel-btn next" type="button" data-carousel-move="1" aria-label="תמונה הבאה">›</button>
+        <div class="project-carousel-dots">
+          <button class="project-carousel-dot active" type="button" data-carousel-dot aria-label="תמונה 1"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-body">
+    <div class="project-detail-content">
+      <h2>תיאור הפרויקט</h2>
+      <p>
+        הפרויקט הוא דף הרשמה ממוקד לסדנאות “מאלפים צעירים”. הדף מציג את ההצעה בצורה ברורה,
+        מוביל לפתיחת טופס הרשמה, מאפשר לבחור מחזור, לאסוף פרטי ילד והורה, לאשר תקנון ולטפל
+        באישור שימוש בתמונות.
+      </p>
+      <p>
+        לאחר מילוי הפרטים המשתמש ממשיך לתשלום, והמערכת שומרת את פרטי ההרשמה ל-Google Sheets
+        בעזרת Google Apps Script. כך נוצר תהליך פשוט: דף נחיתה, טופס, תשלום וריכוז נתונים
+        במקום אחד.
+      </p>
+
+      <div class="project-detail-points">
+        <div class="project-detail-point">
+          <h3>דף נחיתה ממוקד</h3>
+          <p>כותרת ברורה, קריאה להרשמה, רקע ויזואלי ופרטי קשר בולטים.</p>
+        </div>
+        <div class="project-detail-point">
+          <h3>טופס הרשמה</h3>
+          <p>בחירת מחזור, פרטי ילד והורה, מידת חולצה, הערות, תקנון ואישור תמונות.</p>
+        </div>
+        <div class="project-detail-point">
+          <h3>חיבור לתשלום ולגיליון</h3>
+          <p>מעבר לתשלום ושמירת ההרשמות ב-Google Sheets לאחר השלמת התהליך.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/images/logo-full-nobg-90.png" width="44" height="44" alt="mishmish" loading="lazy" decoding="async" />
+      <p><span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools</p>
+      <div class="footer-links">
+        <a href="projects.html" data-i18n="nav.projects">פרויקטים</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
+        <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

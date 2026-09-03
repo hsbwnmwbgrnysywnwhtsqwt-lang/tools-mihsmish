@@ -1,0 +1,86 @@
+{
+  "features" : [
+    "refractivity"
+  ],
+  "fill" : {
+    "automatic-gradient" : "display-p3:0.82959,0.45801,0.22229,1.00000",
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 1
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0
+      }
+    }
+  },
+  "groups" : [
+    {
+      "hidden" : false,
+      "layers" : [
+        {
+          "image-name" : "../assets/images/logo-icon-nobg.png",
+          "name" : "logo-icon-nobg",
+          "position" : {
+            "scale" : 6,
+            "translation-in-points" : [
+              -6,
+              -12
+            ]
+          }
+        }
+      ],
+      "name" : "Group",
+      "refractivity" : {
+        "depth" : 1,
+        "enabled" : true,
+        "strength" : -1
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.6
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.6
+      }
+    },
+    {
+      "hidden" : false,
+      "layers" : [
+        {
+          "image-name" : "../assets/images/logo-icon-nobg.png",
+          "name" : "logo-icon-nobg",
+          "position" : {
+            "scale" : 6,
+            "translation-in-points" : [
+              -6,
+              -12
+            ]
+          }
+        }
+      ],
+      "name" : "scdf",
+      "refractivity" : {
+        "depth" : 1,
+        "enabled" : true,
+        "strength" : -1
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.6
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.6
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

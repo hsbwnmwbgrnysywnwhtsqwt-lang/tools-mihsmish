@@ -60,8 +60,8 @@ const TRANSLATIONS = {
     'tikunchik.desc':     'אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — "susu" הופך ל"דודו" בלחיצת קיצור אחת. נבנה עם Swift ו-SwiftUI.',
     'tlyd.app.name':      'תן לי יד — אפליקציה',
     'tlyd.app.desc':      'אפליקציית Android ו-iOS לחברי צוות של ארגון "תן לי יד" — דיווח פעילויות, צפייה בהיסטוריה וניהול פרופיל.',
-    'tlyd.mgmt.name':     'תן לי יד — אתר ניהול',
-    'tlyd.mgmt.desc':     'מערכת ניהול ווב למנהל הארגון — דשבורד מלא, דוח שכר חודשי, חיובי לקוחות, ניהול מסגרות וצוות.',
+    'tlyd.mgmt.name':     'תן לי יד — מערכת ניהול',
+    'tlyd.mgmt.desc':     'אתר ניהול ב-Next.js ו-Supabase למנהלי הארגון: דשבורד, שיבוצים, דיווחי שעות, דוחות שכר, חיובי לקוחות, חוסרים, חפיפות, ניהול מדריכים, מסגרות וכלבים.',
 
     // --- Project links ---
     'project.chrome_store':   'צפה בחנות הכרום ←',
@@ -136,11 +136,16 @@ const TRANSLATIONS = {
     'projects.cta.subtitle': 'יש לך רעיון? בואו נדבר.',
     'projects.cta.btn1':     'צור קשר ←',
     'projects.cta.btn2':     'השירותים שלי ↓',
+    'projects.tlyd.platform.name': 'תן לי יד — ניהול צוות',
+    'projects.tlyd.platform.desc': 'מערכת מלאה לארגון "תן לי יד", עם אפליקציות iOS ו-Android למדריכים ואתר ניהול למנהלים. כוללת התחברות, דיווח שעות, שיבוצים, אישור חודשי, שכר, תזכורות, דשבורד ניהולי, ניהול צוות, מסגרות וכלבים, חשבוניות, חוסרים, חפיפות ועוזר חכם בעברית שמציע פעולות רק אחרי אישור אנושי.',
+    'projects.tlyd.mgmt.name': 'תן לי יד — מערכת ניהול',
+    'projects.tlyd.registration.name': 'סדנאות קיץ מאלפים צעירים',
+    'projects.tlyd.registration.desc': 'דף הרשמה לסדנאות "מאלפים צעירים": בחירת מחזור, פרטי ילד והורה, תקנון, אישור שימוש בתמונות, מעבר לתשלום ושמירת ההרשמה ל-Google Sheets דרך Google Apps Script.',
     'projects.vc.desc':      'תוסף כרום שנותן שליטה מלאה על סרטונים בכל אתר — YouTube, Netflix, Udemy וכל אתר אחר. כולל שינוי מהירות השמעה, קיצורי מקלדת להרצה/עצירה/דילוג, ועוד פיצ\'רים שימושיים. פורסם בחנות הכרום הרשמית עם אלפי משתמשים פעילים.',
     'projects.mm.desc':      'משחק זיכרון אמוג\'י ל-Android ו-iOS — מצא זוגות של אמוג\'ים בזמן קצר ככל האפשר. כולל רמות קושי שונות, מעקב שיאים אישיים ועיצוב צבעוני ומהנה. נבנה עם Expo/React Native ופורסם ב-Google Play.',
     'projects.tikunchik.desc': 'אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — "susu" הופך ל"דודו" בלחיצת קיצור אחת. במקום המרה עיוורת, הוא בודק כל מילה מול בודק האיות של macOS בעברית ובאנגלית ומחליט לבד לאיזה כיוון להמיר. מתקן ישירות בשדה הטקסט, ויודע גם להחליף את שפת ההקלדה באותה לחיצה. נבנה עם Swift ו-SwiftUI.',
     'projects.tlyd.app.desc':'אפליקציה ל-Android ו-iOS לחברי צוות של ארגון "תן לי יד" — דיווח פעילויות, צפייה בהיסטוריית עבודה, ניהול פרופיל וכניסה עם Google. נבנתה עם React Native ו-Expo.',
-    'projects.tlyd.mgmt.desc':'מערכת ניהול ווב מלאה למנהל הארגון — דשבורד עם סיכום פעילויות, דוח שכר חודשי אוטומטי, ניהול חיובי לקוחות, מסגרות וצוות. נבנה עם Next.js ו-Supabase.',
+    'projects.tlyd.mgmt.desc':'אתר ניהול ב-Next.js ו-Supabase למנהלי הארגון: דשבורד, שיבוצים, דיווחי שעות, דוחות שכר, חיובי לקוחות, חוסרים, חפיפות, ניהול מדריכים, מסגרות וכלבים, כולל עוזר חכם בעברית עם אישור לפני פעולות.',
 
     // --- Memory Master page ---
     'mm.hero.label':    'זמין לאנדרואיד · בטא ל-iOS',
@@ -231,8 +236,8 @@ const TRANSLATIONS = {
     'tikunchik.desc':     'A macOS menu bar app that fixes text typed in the wrong keyboard layout — one shortcut and the gibberish becomes what you meant. Built with Swift and SwiftUI.',
     'tlyd.app.name':      'Ten Li Yad — App',
     'tlyd.app.desc':      'Android & iOS app for the "Ten Li Yad" org team — activity reporting, history viewing and profile management.',
-    'tlyd.mgmt.name':     'Ten Li Yad — Management',
-    'tlyd.mgmt.desc':     'Full web management system for the org admin — dashboard, monthly payroll, client billing, teams & schedules.',
+    'tlyd.mgmt.name':     'Ten Li Yad — Management System',
+    'tlyd.mgmt.desc':     'A Next.js and Supabase management site for org admins: dashboard, scheduling, time reports, payroll reports, client billing, gaps, overlaps, instructors, frameworks and dogs.',
 
     // --- Project links ---
     'project.chrome_store':   'Chrome Web Store ←',
@@ -307,11 +312,16 @@ const TRANSLATIONS = {
     'projects.cta.subtitle': 'Got an idea? Let\'s talk.',
     'projects.cta.btn1':     'Contact ←',
     'projects.cta.btn2':     'My Services ↓',
+    'projects.tlyd.platform.name': 'Ten Li Yad — Team Management',
+    'projects.tlyd.platform.desc': 'A full platform for the Ten Li Yad organization, with iOS and Android apps for instructors plus a web management system for admins. It includes sign-in, time reports, scheduling, monthly confirmation, salary, reminders, admin dashboards, team, framework and dog management, invoices, gaps, overlaps and a Hebrew smart assistant that proposes actions only after human approval.',
+    'projects.tlyd.mgmt.name': 'Ten Li Yad — Management System',
+    'projects.tlyd.registration.name': 'Young Trainers Summer Workshops',
+    'projects.tlyd.registration.desc': 'A registration page for the Young Trainers workshops: cycle selection, child and parent details, policy approval, photo consent, payment handoff and saving registrations to Google Sheets through Google Apps Script.',
     'projects.vc.desc':      'A Chrome extension that gives you full control over videos on any site — YouTube, Netflix, Udemy and more. Includes playback speed control, keyboard shortcuts for play/pause/skip, and more useful features. Published on the official Chrome Web Store with thousands of active users.',
     'projects.mm.desc':      'An emoji memory game for Android & iOS — find pairs as quickly as possible. Includes multiple difficulty levels, personal record tracking and colorful fun design. Built with Expo/React Native and published on Google Play.',
     'projects.tikunchik.desc': 'A macOS menu bar app that fixes text typed in the wrong keyboard layout — one shortcut and the gibberish becomes what you meant. Rather than mapping blindly, it checks each word against the macOS spell checker in both Hebrew and English and decides which way to convert. It fixes the text in place, and can switch your input language in the same keystroke. Built with Swift and SwiftUI.',
     'projects.tlyd.app.desc':'Android & iOS app for the "Ten Li Yad" NGO team — activity reporting, work history viewing, profile management and Google login. Built with React Native and Expo.',
-    'projects.tlyd.mgmt.desc':'Full web management system for the org admin — activity summary dashboard, automatic monthly payroll report, client billing management, schedules and team management. Built with Next.js and Supabase.',
+    'projects.tlyd.mgmt.desc':'A Next.js and Supabase management site for org admins: dashboard, scheduling, time reports, payroll reports, client billing, gaps, overlaps, instructors, frameworks and dogs, including a Hebrew smart assistant with human approval before actions.',
 
     // --- Memory Master page ---
     'mm.hero.label':    'Available on Android · Beta for iOS',
