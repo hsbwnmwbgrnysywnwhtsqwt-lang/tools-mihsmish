@@ -56,6 +56,7 @@ const TRANSLATIONS = {
     'vc.desc':            'תוסף כרום שנותן לך שליטה מלאה על סרטונים בכל אתר — מהירות השמעה, קיצורי מקלדת, ועוד. זמין בחנות הכרום הרשמית.',
     'mishmish.site.name': 'אתר mishmish',
     'mishmish.site.desc': 'האתר הזה! נבנה עם HTML, CSS, JS ועיצוב שנוצר עם AI. כל דבר — מהלוגו ועד הקוד.',
+    'waycode.desc':       'אפליקציית VS Code שנמצאת בפיתוח פעיל: סוכן קוד בתוך סביבת הפיתוח, עם צ\'אט בעברית, קריאת פרויקט, עריכת קבצים והרצת בדיקות. כרגע זה מוצר בבנייה ולא משהו שאני מציג כגרסה סופית.',
     'mm.card.desc':       'משחק זיכרון אמוג\'י ל-Android — מצא זוגות, אתגר את עצמך. נבנה לחלוטין עם AI ופורסם ב-Google Play.',
     'tikunchik.desc':     'אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — "susu" הופך ל"דודו" בלחיצת קיצור אחת. נבנה עם Swift ו-SwiftUI.',
     'tlyd.app.name':      'תן לי יד — אפליקציה',
@@ -142,6 +143,7 @@ const TRANSLATIONS = {
     'projects.tlyd.registration.name': 'סדנאות קיץ מאלפים צעירים',
     'projects.tlyd.registration.desc': 'דף הרשמה לסדנאות "מאלפים צעירים": בחירת מחזור, פרטי ילד והורה, תקנון, אישור שימוש בתמונות, מעבר לתשלום ושמירת ההרשמה ל-Google Sheets דרך Google Apps Script.',
     'projects.vc.desc':      'תוסף כרום שנותן שליטה מלאה על סרטונים בכל אתר — YouTube, Netflix, Udemy וכל אתר אחר. כולל שינוי מהירות השמעה, קיצורי מקלדת להרצה/עצירה/דילוג, ועוד פיצ\'רים שימושיים. פורסם בחנות הכרום הרשמית עם אלפי משתמשים פעילים.',
+    'projects.waycode.desc': 'אפליקציית VS Code שנמצאת בפיתוח פעיל: סוכן קוד בתוך סביבת הפיתוח, עם צ\'אט בעברית, קריאת פרויקט, עריכת קבצים, הרצת בדיקות ובחירת מודלים. יש כבר בסיס עובד ודף Marketplace, אבל באתר היא מוצגת כפרויקט שנבנה ומשתפר.',
     'projects.mm.desc':      'משחק זיכרון אמוג\'י ל-Android ו-iOS — מצא זוגות של אמוג\'ים בזמן קצר ככל האפשר. כולל רמות קושי שונות, מעקב שיאים אישיים ועיצוב צבעוני ומהנה. נבנה עם Expo/React Native ופורסם ב-Google Play.',
     'projects.tikunchik.desc': 'אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה — "susu" הופך ל"דודו" בלחיצת קיצור אחת. במקום המרה עיוורת, הוא בודק כל מילה מול בודק האיות של macOS בעברית ובאנגלית ומחליט לבד לאיזה כיוון להמיר. מתקן ישירות בשדה הטקסט, ויודע גם להחליף את שפת ההקלדה באותה לחיצה. נבנה עם Swift ו-SwiftUI.',
     'projects.tlyd.app.desc':'אפליקציה ל-Android ו-iOS לחברי צוות של ארגון "תן לי יד" — דיווח פעילויות, צפייה בהיסטוריית עבודה, ניהול פרופיל וכניסה עם Google. נבנתה עם React Native ו-Expo.',
@@ -174,7 +176,7 @@ const TRANSLATIONS = {
     'mm.s4.title':      'מתקדמים ברמות',
     'mm.s4.desc':       'כל רמה קשה יותר — יותר כרטיסים, יותר אמוג\'ים, יותר אתגר!',
 
-    'project.in_dev':   '🚧 בפיתוח',
+    'project.in_dev':   'בפיתוח',
 
     // --- Blog page ---
     'blog.title':    'בלוג mishmish',
@@ -232,6 +234,7 @@ const TRANSLATIONS = {
     'vc.desc':            'A Chrome extension that gives you full control over videos on any site — playback speed, keyboard shortcuts, and more. Available on the official Chrome Web Store.',
     'mishmish.site.name': 'mishmish Website',
     'mishmish.site.desc': 'This site! Built with HTML, CSS, JS and AI-generated design. Everything — from the logo to the code.',
+    'waycode.desc':       'A VS Code app in active development: a coding agent inside the editor, with Hebrew chat, project reading, file editing and test running. It is presented as a project still being built, not as a final release.',
     'mm.card.desc':       'An emoji memory game for Android — find pairs, challenge yourself. Built entirely with AI and published on Google Play.',
     'tikunchik.desc':     'A macOS menu bar app that fixes text typed in the wrong keyboard layout — one shortcut and the gibberish becomes what you meant. Built with Swift and SwiftUI.',
     'tlyd.app.name':      'Ten Li Yad — App',
@@ -318,6 +321,7 @@ const TRANSLATIONS = {
     'projects.tlyd.registration.name': 'Young Trainers Summer Workshops',
     'projects.tlyd.registration.desc': 'A registration page for the Young Trainers workshops: cycle selection, child and parent details, policy approval, photo consent, payment handoff and saving registrations to Google Sheets through Google Apps Script.',
     'projects.vc.desc':      'A Chrome extension that gives you full control over videos on any site — YouTube, Netflix, Udemy and more. Includes playback speed control, keyboard shortcuts for play/pause/skip, and more useful features. Published on the official Chrome Web Store with thousands of active users.',
+    'projects.waycode.desc': 'A VS Code app in active development: a coding agent inside the editor, with Hebrew chat, project reading, file editing, test running and model selection. It already has a working base and a Marketplace page, but the site presents it as a project being built and improved.',
     'projects.mm.desc':      'An emoji memory game for Android & iOS — find pairs as quickly as possible. Includes multiple difficulty levels, personal record tracking and colorful fun design. Built with Expo/React Native and published on Google Play.',
     'projects.tikunchik.desc': 'A macOS menu bar app that fixes text typed in the wrong keyboard layout — one shortcut and the gibberish becomes what you meant. Rather than mapping blindly, it checks each word against the macOS spell checker in both Hebrew and English and decides which way to convert. It fixes the text in place, and can switch your input language in the same keystroke. Built with Swift and SwiftUI.',
     'projects.tlyd.app.desc':'Android & iOS app for the "Ten Li Yad" NGO team — activity reporting, work history viewing, profile management and Google login. Built with React Native and Expo.',
@@ -350,7 +354,7 @@ const TRANSLATIONS = {
     'mm.s4.title':      'Level Up',
     'mm.s4.desc':       'Each level is harder — more cards, more emojis, more challenge!',
 
-    'project.in_dev': '🚧 In Development',
+    'project.in_dev': 'In Development',
 
     // --- Blog page ---
     'blog.title':    'mishmish Blog',

@@ -107,9 +107,9 @@ const PROJECT_DETAILS = {
     },
     waycode: {
       title: 'WayCode',
-      short: 'תוסף VS Code שמכניס סוכן קוד דובר עברית לתוך סביבת הפיתוח.',
-      long: 'WayCode הוא תוסף ל-VS Code שמאפשר לבקש תיקונים ושינויים בעברית ישירות מתוך סביבת הפיתוח. הוא קורא את מבנה הפרויקט, מחפש בקבצים, כותב ומתקן קוד, מריץ בדיקות או lint כשצריך, ומציג אישור לפני פעולות מסוכנות. הוא נבנה ב-TypeScript ומיועד לעבודה עם מודלים כמו GPT, Claude, Ollama מקומי או מנוי Claude Code קיים.',
-      tags: ['VS Code', 'TypeScript', 'AI'],
+      short: 'אפליקציית VS Code בפיתוח שמכניסה סוכן קוד דובר עברית לתוך סביבת הפיתוח.',
+      long: 'WayCode היא אפליקציית VS Code שנמצאת בפיתוח פעיל. היא נועדה לאפשר לבקש תיקונים ושינויים בעברית ישירות מתוך סביבת הפיתוח: לקרוא את מבנה הפרויקט, לחפש בקבצים, לערוך קוד, להריץ בדיקות או lint כשצריך, ולהציג אישור לפני פעולות מסוכנות. הפרויקט נבנה ב-TypeScript, יש לו בסיס עובד ודף Marketplace, אבל הוא עדיין מוצג כפרויקט בבנייה ולא כמוצר סופי.',
+      tags: ['VS Code', 'TypeScript', 'AI', 'בפיתוח'],
       screenshots: [
         {
           src: 'assets/images/project-screenshots/waycode-vscode.png',
@@ -217,9 +217,9 @@ const PROJECT_DETAILS = {
     },
     waycode: {
       title: 'WayCode',
-      short: 'A VS Code extension that brings a Hebrew-speaking coding agent into the editor.',
-      long: 'WayCode lets users request fixes and changes in Hebrew from inside VS Code. It reads the project structure, searches files, writes and fixes code, runs tests or lint when needed, and asks before risky actions. It is built in TypeScript and can work with GPT, Claude, local Ollama models or an existing Claude Code subscription.',
-      tags: ['VS Code', 'TypeScript', 'AI'],
+      short: 'A VS Code app in active development that brings a Hebrew-speaking coding agent into the editor.',
+      long: 'WayCode is a VS Code app in active development. It is built to let users request fixes and changes in Hebrew from inside the editor: read the project structure, search files, edit code, run tests or lint when needed, and ask before risky actions. It is built in TypeScript, already has a working base and a Marketplace page, but it is presented as an in-progress project rather than a finished product.',
+      tags: ['VS Code', 'TypeScript', 'AI', 'In Development'],
       screenshots: [
         {
           src: 'assets/images/project-screenshots/waycode-vscode.png',
