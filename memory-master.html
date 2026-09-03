@@ -11,7 +11,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Memory Master — משחק זיכרון אמוג'י לאנדרואיד" />
   <meta property="og:description" content="משחק זיכרון אמוג'י חינמי לאנדרואיד. עכשיו זמין לכולם ב-Google Play!" />
-  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/memory master.png" />
+  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/memory-master-home.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://memory-master.tools-mishmish.com/" />
   <meta property="og:locale" content="he_IL" />
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Memory Master — משחק זיכרון אמוג'י לאנדרואיד" />
   <meta name="twitter:description" content="משחק זיכרון אמוג'י חינמי לאנדרואיד. עכשיו זמין לכולם ב-Google Play!" />
-  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/memory master.png" />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/memory-master-home.png" />
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -35,7 +35,7 @@
     "url": "https://memory-master.tools-mishmish.com/",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.levmish.emojimemory",
     "installUrl": "https://play.google.com/store/apps/details?id=com.levmish.emojimemory",
-    "image": "https://www.tools-mishmish.com/assets/images/memory master.png",
+    "image": "https://www.tools-mishmish.com/assets/images/project-screenshots/memory-master-home.png",
     "description": "Memory Master — משחק זיכרון אמוג'י ל-Android ו-iOS. מצא זוגות של אמוג'ים בזמן קצר ככל האפשר, עם רמות קושי שונות ומעקב שיאים אישיים. נבנה עם Expo/React Native ופורסם ב-Google Play. גרסת iOS זמינה דרך TestFlight.",
     "offers": {
       "@type": "Offer",
@@ -112,16 +112,24 @@
     <div class="project-detail-content">
       <h2>תצוגת פרויקט</h2>
       <p>
-        Memory Master מוצג כפרויקט אפליקציה: יש לו מוצר זמין, חנות הורדה, גרסת iOS בבדיקה, ותיאור ברור של חוויית המשחק. כרגע אין צילום מסך אמיתי של המשחק באתר, אז הפריוויו משתמש בזהות הוויזואלית של האפליקציה עד שתוסיף צילומי מסך מהטלפון.
+        Memory Master הוא משחק זיכרון מלא שזמין בדפדפן ובמובייל. מסך הבית מציג ערכות נושא, אתגר יומי, גביעים וחנות, ומסך המשחק מרכז את הקלפים, הזמן, המהלכים והפרס במקום אחד.
       </p>
-      <div class="project-showcase-strip">
-        <div class="project-showcase-media">
-          <img src="assets/images/memory master-240.png" alt="Memory Master" loading="lazy" decoding="async" />
+      <div class="project-page-carousel" data-page-carousel>
+        <button class="project-carousel-btn prev" type="button" data-carousel-move="-1" aria-label="תמונה קודמת">‹</button>
+        <div class="project-page-carousel-track" data-carousel-track>
+          <figure class="project-page-slide" data-carousel-slide>
+            <img src="assets/images/project-screenshots/memory-master-home.png" alt="מסך הבית של Memory Master" fetchpriority="high" decoding="async" />
+            <figcaption>בחירת ערכות ואתגר יומי</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide>
+            <img src="assets/images/project-screenshots/memory-master-game.png" alt="לוח המשחק של Memory Master" loading="lazy" decoding="async" />
+            <figcaption>לוח משחק פעיל</figcaption>
+          </figure>
         </div>
-        <div class="project-showcase-copy">
-          <span>מה חשוב לראות בפרויקט</span>
-          <h3>משחק פשוט, ברור, ומוכן לפרסום</h3>
-          <p>הדף מסביר את המשחק, רמות הקושי, השיאים האישיים והפרסום ל-Google Play, כדי שמבקר יבין שזה לא רק רעיון אלא מוצר אמיתי.</p>
+        <button class="project-carousel-btn next" type="button" data-carousel-move="1" aria-label="תמונה הבאה">›</button>
+        <div class="project-carousel-dots">
+          <button class="project-carousel-dot active" type="button" data-carousel-dot aria-label="תמונה 1"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 2"></button>
         </div>
       </div>
     </div>

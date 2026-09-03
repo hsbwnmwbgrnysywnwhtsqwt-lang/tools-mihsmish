@@ -128,7 +128,18 @@ const PROJECT_DETAILS = {
       short: 'משחק זיכרון אמוג׳י למובייל.',
       long: 'Memory Master הוא משחק זיכרון צבעוני שבו המשתמשים מחפשים זוגות של אמוג׳ים בזמן קצר ככל האפשר. האפליקציה כוללת רמות קושי, שיאים אישיים וחוויית משחק פשוטה שמתאימה גם לילדים וגם למבוגרים. הפרויקט נבנה עם Expo ו-React Native ופורסם ב-Google Play, עם גרסת iOS בבטא.',
       tags: ['Expo', 'React Native', 'Google Play', 'AI'],
-      screenshots: []
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/memory-master-home.png',
+          alt: 'מסך הבית של Memory Master',
+          caption: 'בחירת ערכות ואתגר יומי'
+        },
+        {
+          src: 'assets/images/project-screenshots/memory-master-game.png',
+          alt: 'לוח המשחק של Memory Master',
+          caption: 'לוח משחק פעיל'
+        }
+      ]
     },
     tikunchik: {
       title: 'Tikunchik',
@@ -217,7 +228,18 @@ const PROJECT_DETAILS = {
       short: 'An emoji memory game for mobile.',
       long: 'Memory Master is a colorful memory game where players find matching emoji pairs as quickly as possible. It includes difficulty levels, personal records and a simple experience for both kids and adults. The project was built with Expo and React Native and published on Google Play, with an iOS beta available.',
       tags: ['Expo', 'React Native', 'Google Play', 'AI'],
-      screenshots: []
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/memory-master-home.png',
+          alt: 'Memory Master home screen',
+          caption: 'Theme selection and daily challenge'
+        },
+        {
+          src: 'assets/images/project-screenshots/memory-master-game.png',
+          alt: 'Memory Master game board',
+          caption: 'An active game board'
+        }
+      ]
     },
     tikunchik: {
       title: 'Tikunchik',
