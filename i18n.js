@@ -85,7 +85,15 @@ const TRANSLATIONS = {
     'hire.card3.desc':    'כלי שיחסוך לך זמן — אינטגרציות, בוטים, ועוד.',
     'hire.card4.title':   'כלי / אפליקציה',
     'hire.card4.desc':    'יש לך רעיון? בואו נבנה אותו ביחד.',
-    'hire.cta.desc':      'מחיר גמיש, תקשורת ישירה, עבודה מהירה.',
+    'pricing.label':      'תמחור',
+    'pricing.title':      'כמה זה עולה?',
+    'pricing.desc':       'משלמים אחרי שרואים שזה עובד, עוזר, ומתאים למה שהיית צריך.',
+    'pricing.setup.label': 'הקמה חד-פעמית',
+    'pricing.setup.price': '₪300-₪700',
+    'pricing.monthly.label': 'תחזוקה חודשית',
+    'pricing.monthly.price': '₪20-₪100',
+    'pricing.note':       'העלות החודשית משתנה לפי שימוש בכלים חיצוניים כמו AI, WhatsApp API, כתובת אתר/דומיין, אחסון, בסיס נתונים או שירותים נוספים.',
+    'hire.cta.desc':      'תמחור שקוף, תקשורת ישירה, עבודה מהירה.',
     'hire.cta.btn':       'שלח לי הודעה ←',
 
     // --- About page ---
@@ -263,7 +271,15 @@ const TRANSLATIONS = {
     'hire.card3.desc':    'A tool that saves you time — integrations, bots, and more.',
     'hire.card4.title':   'Tool / App',
     'hire.card4.desc':    'Got an idea? Let\'s build it together.',
-    'hire.cta.desc':      'Flexible pricing, direct communication, fast delivery.',
+    'pricing.label':      'Pricing',
+    'pricing.title':      'How much does it cost?',
+    'pricing.desc':       'You pay after seeing that it works, helps, and fits what you needed.',
+    'pricing.setup.label': 'One-time setup',
+    'pricing.setup.price': '₪300-₪700',
+    'pricing.monthly.label': 'Monthly maintenance',
+    'pricing.monthly.price': '₪20-₪100',
+    'pricing.note':       'The monthly cost changes based on external tools such as AI, WhatsApp API, a website address/domain, hosting, database usage, or other services.',
+    'hire.cta.desc':      'Transparent pricing, direct communication, fast delivery.',
     'hire.cta.btn':       'Send me a message ←',
 
     // --- About page ---
