@@ -198,6 +198,19 @@ const PROJECT_DETAILS = {
           caption: 'דף פתיחה והרשמה לסדנאות'
         }
       ]
+    },
+    meitar: {
+      title: 'מיתר — בית חינוך ברוח דיאלוגית',
+      short: 'אתר מידע והרשמה לבית חינוך.',
+      long: 'אתר שנבנה עבור בית החינוך מיתר. האתר מציג את המקום, מוביל הורים להשארת פרטים, מאפשר יצירת קשר מהירה ושומר פניות ל-Google Sheets דרך Google Apps Script. מבחינה טכנית הוא דומה לדף ההרשמה של סדנאות הקיץ, רק בלי תשלום.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Google Apps Script', 'Google Sheets'],
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/meitar-hero.jpg',
+          alt: 'אתר מיתר',
+          caption: 'דף פתיחה, מילוי פרטים ויצירת קשר'
+        }
+      ]
     }
   },
   en: {
@@ -306,6 +319,19 @@ const PROJECT_DETAILS = {
           src: 'assets/images/project-screenshots/young-trainers-registration-hero.png',
           alt: 'Young Trainers Summer Workshops landing page',
           caption: 'Workshop landing and registration page'
+        }
+      ]
+    },
+    meitar: {
+      title: 'Meitar — Dialogic Education School',
+      short: 'An information and registration website for a school.',
+      long: 'A website built for Meitar. The site presents the school, leads parents to leave their details, supports quick contact and saves inquiries to Google Sheets through Google Apps Script. Technically it is similar to the summer workshop registration page, only without payment.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Google Apps Script', 'Google Sheets'],
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/meitar-hero.jpg',
+          alt: 'Meitar website',
+          caption: 'Hero page, details form and contact flow'
         }
       ]
     }
@@ -575,6 +601,31 @@ document.querySelectorAll('[data-path-filter]').forEach(card => {
     if (filter) window.setTimeout(() => setProjectFilter(filter), 250);
   });
 });
+
+function loadPreviewVideo(video) {
+  if (!video || video.dataset.loaded === 'true') return;
+  const src = video.getAttribute('data-video-src');
+  if (!src) return;
+  video.src = src;
+  video.dataset.loaded = 'true';
+  video.load();
+  const playPromise = video.play();
+  if (playPromise?.catch) playPromise.catch(() => {});
+}
+
+const previewVideos = [...document.querySelectorAll('video[data-video-src]')];
+if ('IntersectionObserver' in window) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      loadPreviewVideo(entry.target);
+      videoObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: '220px 0px' });
+  previewVideos.forEach(video => videoObserver.observe(video));
+} else {
+  previewVideos.forEach(loadPreviewVideo);
+}
 
 function injectFloatingWhatsapp() {
   if (document.querySelector('.floating-whatsapp')) return;

@@ -110,10 +110,11 @@
       <p class="beta-tagline" data-i18n="projects.hero.tagline">אתרים, תוספים, אפליקציות וכלים — עם AI</p>
       <div class="project-filters project-filters-hero" aria-label="סינון פרויקטים">
         <button class="project-filter active" type="button" data-filter="all" data-i18n="filters.all">הכול</button>
-        <button class="project-filter" type="button" data-filter="client" data-i18n="filters.client">לאחרים</button>
-        <button class="project-filter" type="button" data-filter="app" data-i18n="filters.apps">אפליקציות וכלים</button>
-        <button class="project-filter" type="button" data-filter="web" data-i18n="filters.web">אתרים</button>
-        <button class="project-filter" type="button" data-filter="dev" data-i18n="filters.dev">בפיתוח</button>
+        <button class="project-filter" type="button" data-filter="custom_tool" data-i18n="filters.custom_tool">כלי מותאם לעסק</button>
+        <button class="project-filter" type="button" data-filter="landing" data-i18n="filters.landing">דפי נחיתה</button>
+        <button class="project-filter" type="button" data-filter="registration" data-i18n="filters.registration">טפסי הרשמה</button>
+        <button class="project-filter" type="button" data-filter="app" data-i18n="filters.apps">אפליקציות</button>
+        <button class="project-filter" type="button" data-filter="automation" data-i18n="filters.automation">אוטומציות</button>
       </div>
     </div>
   </section>
@@ -126,7 +127,7 @@
         <div class="projects-section-label"><span data-i18n="projects.others_label">דברים שבניתי לאחרים</span></div>
 
         <!-- תן לי יד - מערכת מלאה -->
-        <div class="project-card featured" data-project-id="ten-li-yad-platform" data-project-url="ten-li-yad-team-management.html" data-project-category="client app web automation">
+        <div class="project-card featured" data-project-id="ten-li-yad-platform" data-project-url="ten-li-yad-team-management.html" data-project-category="client custom_tool app automation">
           <div class="project-card-top">
             <img src="assets/images/ten-li-yad-logo-90.png" width="45" height="45" alt="תן לי יד לוגו" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">לאחרים</span>
@@ -155,13 +156,10 @@
             <span class="tag">Supabase</span>
             <span class="tag">AI</span>
           </div>
-          <div class="project-footer">
-            <span style="font-size:0.75rem; color:var(--text-xlight);" data-i18n="project.internal_only">מיועד לצוות תן לי יד בלבד</span>
-          </div>
         </div>
 
         <!-- תן לי יד - טופס הרשמה -->
-        <div class="project-card featured" data-project-id="ten-li-yad-registration" data-project-url="young-trainers-workshops.html" data-project-category="client web">
+        <div class="project-card featured" data-project-id="ten-li-yad-registration" data-project-url="young-trainers-workshops.html" data-project-category="client landing registration">
           <div class="project-card-top">
             <img src="assets/images/ten-li-yad-logo-90.png" width="45" height="45" alt="תן לי יד לוגו" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">לאחרים</span>
@@ -187,15 +185,44 @@
             <span class="tag">Google Apps Script</span>
             <span class="tag">AI</span>
           </div>
-          <div class="project-footer">
-            <span style="font-size:0.75rem; color:var(--text-xlight);">טופס הרשמה ותשלום</span>
+        </div>
+
+        <!-- מיתר - בית חינוך ברוח דיאלוגית -->
+        <div class="project-card featured" data-project-id="meitar" data-project-url="meitar.html" data-project-category="client landing registration">
+          <div class="project-card-top">
+            <img src="assets/images/meitar-logo.png" width="45" height="45" alt="לוגו מיתר" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
+            <span class="project-ai-badge" data-i18n="project.client">ללקוח</span>
+          </div>
+          <div class="project-name" data-i18n="projects.meitar.name">מיתר — בית חינוך ברוח דיאלוגית</div>
+          <div class="project-preview">
+            <video
+              class="project-preview-video"
+              muted
+              loop
+              autoplay
+              playsinline
+              preload="none"
+              poster="assets/images/project-screenshots/meitar-hero.jpg"
+              aria-label="תצוגה מקדימה זזה של אתר מיתר"
+              data-video-src="assets/images/project-screenshots/meitar-demo.m4v"
+            ></video>
+          </div>
+          <div class="project-desc" data-i18n="projects.meitar.desc">
+            אתר מידע והרשמה לבית החינוך מיתר, עם דף פתיחה, מילוי פרטים, יצירת קשר ושמירת פניות ל-Google Sheets.
+          </div>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Google Sheets</span>
           </div>
         </div>
 
         <div class="projects-section-label divider"><span data-i18n="projects.my_label">הפרויקטים שלי</span></div>
 
         <!-- Video Controller -->
-        <div class="project-card featured" data-project-id="video-controller" data-project-url="video-controller.html" data-project-category="app">
+        <div class="project-card featured" data-project-id="video-controller" data-project-url="video-controller.html" data-project-category="personal">
           <div class="project-card-top">
             <img src="assets/images/Video Controller-90.png" width="45" height="45" alt="Video Controller Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -225,7 +252,7 @@
         </div>
 
         <!-- אתר mishmish -->
-        <div class="project-card" data-project-id="mishmish-site" data-project-category="web">
+        <div class="project-card" data-project-id="mishmish-site" data-project-category="personal">
           <div class="project-card-top">
             <img src="assets/images/logo-full-nobg-90.png" width="45" height="45" alt="mishmish Logo" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -248,7 +275,7 @@
 
 
         <!-- WayCode -->
-        <div class="project-card featured project-card-dev" data-project-id="waycode" data-project-url="waycode.html" data-project-category="app dev">
+        <div class="project-card featured project-card-dev" data-project-id="waycode" data-project-url="waycode.html" data-project-category="personal">
           <div class="project-card-top">
             <img src="assets/images/weycode-logo-90.png" width="45" height="45" alt="WayCode Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge" data-i18n="project.in_dev">בפיתוח</span>
@@ -275,7 +302,7 @@
         </div>
 
         <!-- Memory Master -->
-        <div class="project-card featured" data-project-id="memory-master" data-project-url="memory-master.html" data-project-category="app">
+        <div class="project-card featured" data-project-id="memory-master" data-project-url="memory-master.html" data-project-category="personal">
           <div class="project-card-top">
             <img src="assets/images/memory master-90.png" width="45" height="45" alt="Memory Master Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -306,7 +333,7 @@
         </div>
 
         <!-- Tikunchik -->
-        <div class="project-card featured" data-project-id="tikunchik" data-project-url="tikunchik.html" data-project-category="app">
+        <div class="project-card featured" data-project-id="tikunchik" data-project-url="tikunchik.html" data-project-category="personal">
           <div class="project-card-top">
             <img src="assets/images/tikunchik-logo-90.png" width="45" height="45" alt="Tikunchik Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>

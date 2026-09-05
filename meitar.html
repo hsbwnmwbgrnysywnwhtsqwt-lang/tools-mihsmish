@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מיתר — בית חינוך ברוח דיאלוגית | mishmish</title>
+  <meta name="description" content="מיתר — אתר מידע והרשמה לבית חינוך ברוח דיאלוגית, עם דף נחיתה, טופס פרטים, יצירת קשר ושמירה ל-Google Sheets." />
+  <link rel="canonical" href="https://www.tools-mishmish.com/meitar.html" />
+  <meta property="og:title" content="מיתר — בית חינוך ברוח דיאלוגית" />
+  <meta property="og:description" content="אתר מידע והרשמה לבית חינוך ברוח דיאלוגית, עם טופס פרטים ושמירת פניות ל-Google Sheets." />
+  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/meitar-hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tools-mishmish.com/meitar.html" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="mishmish" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="מיתר — בית חינוך ברוח דיאלוגית" />
+  <meta name="twitter:description" content="אתר מידע והרשמה לבית חינוך ברוח דיאלוגית, עם טופס פרטים ושמירת פניות ל-Google Sheets." />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/meitar-hero.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/logo-icon-nobg.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-icon-nobg.png" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo-icon-nobg-76.png" width="38" height="38" alt="mishmish לוגו" decoding="async" />
+      <span>mishmish</span>
+    </a>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="project-detail-hero">
+    <div class="project-detail-hero-inner">
+      <div>
+        <span class="project-detail-label">פרויקט ללקוח</span>
+        <h1 class="project-detail-title">מיתר — בית חינוך ברוח דיאלוגית</h1>
+        <p class="project-detail-summary">
+          אתר מידע והרשמה שמציג את בית החינוך, מוביל הורים למילוי פרטים, מאפשר יצירת קשר
+          ושומר את הפניות בצורה מסודרת ב-Google Sheets.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Google Apps Script</span>
+          <span class="tag">Google Sheets</span>
+        </div>
+      </div>
+
+      <div class="project-page-carousel" data-page-carousel>
+        <button class="project-carousel-btn prev" type="button" data-carousel-move="-1" aria-label="תמונה קודמת">‹</button>
+        <div class="project-page-carousel-track" data-carousel-track>
+          <figure class="project-page-slide" data-carousel-slide>
+            <video
+              class="project-detail-video"
+              muted
+              loop
+              autoplay
+              playsinline
+              preload="none"
+              poster="assets/images/project-screenshots/meitar-hero.jpg"
+              aria-label="תצוגה מקדימה זזה של אתר מיתר"
+              data-video-src="assets/images/project-screenshots/meitar-demo.m4v"
+            ></video>
+            <figcaption>דף פתיחה, הנעה למילוי פרטים ויצירת קשר</figcaption>
+          </figure>
+        </div>
+        <button class="project-carousel-btn next" type="button" data-carousel-move="1" aria-label="תמונה הבאה">›</button>
+        <div class="project-carousel-dots">
+          <button class="project-carousel-dot active" type="button" data-carousel-dot aria-label="תמונה 1"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-body">
+    <div class="project-detail-content">
+      <h2>תיאור הפרויקט</h2>
+      <p>
+        הפרויקט נבנה כאתר פשוט וברור לבית החינוך מיתר. המטרה הייתה ליצור דף שמסביר במהירות
+        מה המקום מציע, נותן להורים דרך להשאיר פרטים, ומרכז את הפניות בצורה שקל להמשיך ממנה.
+      </p>
+      <p>
+        מבחינה טכנית זה דומה לדף ההרשמה של סדנאות הקיץ: אתר סטטי ב-HTML, CSS ו-JavaScript,
+        עם חיבור ל-Google Apps Script ששומר את הנתונים ל-Google Sheets. ההבדל הוא שכאן אין
+        תשלום, אלא זרימה של מידע, יצירת קשר והרשמה ראשונית.
+      </p>
+
+      <div class="project-detail-points">
+        <div class="project-detail-point">
+          <h3>דף נחיתה ברור</h3>
+          <p>מסר מרכזי, רקע ויזואלי, כפתור למילוי פרטים ופרטי קשר זמינים.</p>
+        </div>
+        <div class="project-detail-point">
+          <h3>טופס פרטים</h3>
+          <p>איסוף פרטי מתעניינים בצורה פשוטה, בלי להעמיס על המשתמש בשלב הראשון.</p>
+        </div>
+        <div class="project-detail-point">
+          <h3>שמירה לגיליון</h3>
+          <p>חיבור ל-Google Sheets דרך Google Apps Script כדי לרכז פניות במקום אחד.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/images/logo-full-nobg-90.png" width="44" height="44" alt="mishmish" loading="lazy" decoding="async" />
+      <p><span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools</p>
+      <div class="footer-links">
+        <a href="projects.html" data-i18n="nav.projects">פרויקטים</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
+        <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

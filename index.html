@@ -197,7 +197,7 @@
       </div>
 
       <div class="project-paths">
-        <a href="#hire" class="path-card" data-path-filter="web">
+        <a href="#hire" class="path-card" data-path-filter="landing">
           <span class="path-icon">🌐</span>
           <strong data-i18n="paths.web.title">אתר לעסק או רעיון</strong>
           <small data-i18n="paths.web.desc">דף נחיתה, פורטפוליו או אתר קטן שמציג משהו ברור.</small>
@@ -225,9 +225,8 @@
       <div class="about-grid">
         <div class="about-text">
           <p data-i18n="about.text">
-            קוראים לי <strong>מיכאל לב</strong>, אני מתכנת AI ויוצר אתרים, אפליקציות וכלים בסיסיים.
-            אני מתכנת בעזרת AI כבר <strong>3 שנים</strong>, ומתמקצע ולומד דברים חדשים בכל יום.
-            לאחרונה התחלתי לבנות פרויקטים גם עבור אחרים במטרה להתפתח מקצועית ולהפוך את הידע שלי לערך עבורכם.
+            קוראים לי <strong>מיכאל לב</strong>, אני בן 12.
+            אני בונה דפי נחיתה וכלים פשוטים לעסקים.
           </p>
           <div class="about-cards">
             <div class="about-card">
@@ -315,10 +314,11 @@
 
       <div class="project-filters" aria-label="סינון פרויקטים">
         <button class="project-filter active" type="button" data-filter="all" data-i18n="filters.all">הכול</button>
-        <button class="project-filter" type="button" data-filter="client" data-i18n="filters.client">לאחרים</button>
-        <button class="project-filter" type="button" data-filter="app" data-i18n="filters.apps">אפליקציות וכלים</button>
-        <button class="project-filter" type="button" data-filter="web" data-i18n="filters.web">אתרים</button>
-        <button class="project-filter" type="button" data-filter="dev" data-i18n="filters.dev">בפיתוח</button>
+        <button class="project-filter" type="button" data-filter="custom_tool" data-i18n="filters.custom_tool">כלי מותאם לעסק</button>
+        <button class="project-filter" type="button" data-filter="landing" data-i18n="filters.landing">דפי נחיתה</button>
+        <button class="project-filter" type="button" data-filter="registration" data-i18n="filters.registration">טפסי הרשמה</button>
+        <button class="project-filter" type="button" data-filter="app" data-i18n="filters.apps">אפליקציות</button>
+        <button class="project-filter" type="button" data-filter="automation" data-i18n="filters.automation">אוטומציות</button>
       </div>
 
       <div class="projects-grid">
@@ -326,7 +326,7 @@
         <div class="projects-section-label"><span data-i18n="projects.others_label">דברים שבניתי לאחרים</span></div>
 
         <!-- תן לי יד - מערכת מלאה -->
-        <div class="project-card featured" data-project-id="ten-li-yad-platform" data-project-url="ten-li-yad-team-management.html" data-project-category="client app web automation">
+        <div class="project-card featured" data-project-id="ten-li-yad-platform" data-project-url="ten-li-yad-team-management.html" data-project-category="client custom_tool app automation">
           <div class="project-card-top">
             <img src="assets/images/ten-li-yad-logo-90.png" width="45" height="45" alt="תן לי יד לוגו" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">לאחרים</span>
@@ -355,13 +355,10 @@
             <span class="tag">Supabase</span>
             <span class="tag">AI</span>
           </div>
-          <div class="project-footer">
-            <span style="font-size:0.75rem; color:var(--text-xlight);" data-i18n="project.internal_only">מיועד לצוות תן לי יד בלבד</span>
-          </div>
         </div>
 
         <!-- תן לי יד - טופס הרשמה -->
-        <div class="project-card featured" data-project-id="ten-li-yad-registration" data-project-url="young-trainers-workshops.html" data-project-category="client web">
+        <div class="project-card featured" data-project-id="ten-li-yad-registration" data-project-url="young-trainers-workshops.html" data-project-category="client landing registration">
           <div class="project-card-top">
             <img src="assets/images/ten-li-yad-logo-90.png" width="45" height="45" alt="תן לי יד לוגו" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">לאחרים</span>
@@ -387,169 +384,45 @@
             <span class="tag">Google Apps Script</span>
             <span class="tag">AI</span>
           </div>
-         <div class="project-footer">
-            <span style="font-size:0.75rem; color:var(--text-xlight);">טופס הרשמה ותשלום</span>
-          </div>
         </div>
 
-        <div class="projects-section-label divider"><span data-i18n="projects.my_label">הפרויקטים שלי</span></div>
-
-        <!-- Video Controller -->
-        <div class="project-card featured" data-project-id="video-controller" data-project-url="video-controller.html" data-project-category="app">
+        <!-- מיתר - בית חינוך ברוח דיאלוגית -->
+        <div class="project-card featured" data-project-id="meitar" data-project-url="meitar.html" data-project-category="client landing registration">
           <div class="project-card-top">
-            <img src="assets/images/Video Controller-90.png" width="45" height="45" alt="Video Controller Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
-            <span class="project-ai-badge">AI</span>
+            <img src="assets/images/meitar-logo.png" width="45" height="45" alt="לוגו מיתר" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
+            <span class="project-ai-badge" data-i18n="project.client">ללקוח</span>
           </div>
-          <div class="project-name">Video Controller</div>
-          <div class="project-preview project-preview-logo">
-            <img src="assets/images/Video Controller.png" alt="תצוגה מקדימה של Video Controller" loading="lazy" decoding="async" />
+          <div class="project-name" data-i18n="projects.meitar.name">מיתר — בית חינוך ברוח דיאלוגית</div>
+          <div class="project-preview">
+            <video
+              class="project-preview-video"
+              muted
+              loop
+              autoplay
+              playsinline
+              preload="none"
+              poster="assets/images/project-screenshots/meitar-hero.jpg"
+              aria-label="תצוגה מקדימה זזה של אתר מיתר"
+              data-video-src="assets/images/project-screenshots/meitar-demo.m4v"
+            ></video>
           </div>
-          <div class="project-desc" data-i18n="vc.desc">
-            תוסף כרום שנותן לך שליטה מלאה על סרטונים בכל אתר —
-            מהירות השמעה, קיצורי מקלדת, ועוד.
-            זמין בחנות הכרום הרשמית.
-          </div>
-          <div class="project-tags">
-            <span class="tag">Chrome Extension</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">AI</span>
-          </div>
-          <div class="project-footer">
-            <a
-              href="https://chromewebstore.google.com/detail/video-controller/pddiobhmolcdlagkfkjafobnkemakmog?authuser=0&hl=iw"
-              target="_blank"
-              class="project-link"
-              data-i18n="project.chrome_store"
-            >
-              צפה בחנות הכרום ←
-            </a>
-            <a
-              href="https://github.com/hsbwnmwbgrnysywnwhtsqwt-lang/video-controller"
-              target="_blank"
-              class="project-link"
-              data-i18n="project.github"
-            >
-              צפה בגיטהב ←
-            </a>
-          </div>
-        </div>
-
- <!-- mishmish -->
-        <div class="project-card featured" data-project-id="mishmish-site" data-project-category="web">
-          <div class="project-card-top">
-            <img src="assets/images/logo-full-nobg-90.png" width="45" height="45" alt="mishmish Logo" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
-            <span class="project-ai-badge">AI</span>
-          </div>
-          <div class="project-name" data-i18n="mishmish.site.name">אתר mishmish</div>
-          <div class="project-preview project-preview-logo">
-            <img src="assets/images/logo-full-nobg-360.png" alt="תצוגה מקדימה של אתר mishmish" loading="lazy" decoding="async" />
-          </div>
-          <div class="project-desc" data-i18n="mishmish.site.desc">
-            האתר הזה! נבנה עם HTML, CSS, JS ועיצוב שנוצר
-            עם AI. כל דבר — מהלוגו ועד הקוד.
+          <div class="project-desc" data-i18n="projects.meitar.desc">
+            אתר מידע והרשמה לבית החינוך מיתר, עם דף פתיחה, מילוי פרטים, יצירת קשר ושמירת פניות ל-Google Sheets.
           </div>
           <div class="project-tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
             <span class="tag">JavaScript</span>
-            <span class="tag">AI</span>
-            <span class="tag">Vercel</span>
-          </div>
-          <div class="project-footer">
-            <a
-              href="https://github.com/hsbwnmwbgrnysywnwhtsqwt-lang/tools-mihmish"
-              target="_blank"
-              class="project-link"
-              data-i18n="project.github_dl"
-            >
-             רוצה להוריד או לצפות בגיטהב←
-            </a>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Google Sheets</span>
           </div>
         </div>
 
-
-
-        <!-- WayCode -->
-        <div class="project-card featured project-card-dev" data-project-id="waycode" data-project-url="waycode.html" data-project-category="app dev">
-          <div class="project-card-top">
-            <img src="assets/images/weycode-logo-90.png" width="45" height="45" alt="WayCode Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
-            <span class="project-ai-badge" data-i18n="project.in_dev">בפיתוח</span>
-          </div>
-          <div class="project-name">WayCode</div>
-          <div class="project-preview">
-            <img src="assets/images/project-screenshots/waycode-vscode.png" alt="WayCode פועל בתוך VS Code" loading="lazy" decoding="async" />
-          </div>
-          <div class="project-desc" data-i18n="waycode.desc">
-            אפליקציית VS Code שנמצאת בפיתוח פעיל: סוכן קוד בתוך סביבת הפיתוח,
-            עם צ'אט בעברית, קריאת פרויקט, עריכת קבצים והרצת בדיקות.
-            כרגע זה מוצר בבנייה ולא משהו שאני מציג כגרסה סופית.
-          </div>
-          <div class="project-tags">
-            <span class="tag">VS Code</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">AI</span>
-            <span class="tag" data-i18n="project.in_dev">בפיתוח</span>
-          </div>
-          <div class="project-footer">
-            <a href="https://marketplace.visualstudio.com/items?itemName=tools-mishmish.waycode" target="_blank" class="project-link" data-i18n="project.marketplace">VS Code Marketplace ←</a>
-            <a href="waycode.html" class="project-link" data-i18n="project.more_details">פרטים נוספים ←</a>
-          </div>
-        </div>
-
-        <!-- Memory Master -->
-        <div class="project-card featured" data-project-id="memory-master" data-project-url="memory-master.html" data-project-category="app">
-          <div class="project-card-top">
-            <img src="assets/images/memory master-90.png" width="45" height="45" alt="Memory Master Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
-            <span class="project-ai-badge">AI</span>
-          </div>
-          <div class="project-name">Memory Master</div>
-          <div class="project-preview">
-            <img src="assets/images/project-screenshots/memory-master-play-home.jpg" alt="מסך הבית של Memory Master מתוך Google Play" loading="lazy" decoding="async" />
-          </div>
-          <div class="project-desc" data-i18n="mm.card.desc">
-            משחק זיכרון אמוג'י ל-Android — מצא זוגות, אתגר את עצמך.
-            נבנה לחלוטין עם AI ופורסם ב-Google Play.
-          </div>
-          <div class="project-tags">
-            <span class="tag">Expo</span>
-            <span class="tag">Google Play</span>
-            <span class="tag">AI</span>
-          </div>
-          <div class="project-footer">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.levmish.emojimemory"
-              target="_blank"
-              class="project-link"
-            >Google Play ←</a>
-            <a href="https://memory-master.tools-mishmish.com" target="_blank" class="project-link" data-i18n="project.website">האתר ←</a>
-            <a href="memory-master.html" class="project-link" data-i18n="project.more_details">פרטים נוספים ←</a>
-          </div>
-        </div>
-
-        <!-- Tikunchik -->
-        <div class="project-card featured" data-project-id="tikunchik" data-project-url="tikunchik.html" data-project-category="app">
-          <div class="project-card-top">
-            <img src="assets/images/tikunchik-logo-90.png" width="45" height="45" alt="Tikunchik Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
-            <span class="project-ai-badge">AI</span>
-          </div>
-          <div class="project-name">Tikunchik</div>
-          <div class="project-preview project-preview-logo">
-            <img src="assets/images/tikunchik-logo-240.png" alt="תצוגה מקדימה של Tikunchik" loading="lazy" decoding="async" />
-          </div>
-          <div class="project-desc" data-i18n="tikunchik.desc">
-            אפליקציית שורת תפריטים ל-macOS שמתקנת טקסט שהוקלד בשפה הלא נכונה —
-            "susu" הופך ל"דודו" בלחיצת קיצור אחת. נבנה עם Swift ו-SwiftUI.
-          </div>
-          <div class="project-tags">
-            <span class="tag">Swift</span>
-            <span class="tag">SwiftUI</span>
-            <span class="tag">macOS</span>
-            <span class="tag">AI</span>
-          </div>
-          <div class="project-footer">
-            <a href="Tikunchik.dmg" download class="project-link" data-i18n="project.download_mac">הורד ל-macOS ←</a>
-            <a href="tikunchik.html" class="project-link" data-i18n="project.more_details">פרטים נוספים ←</a>
-          </div>
+        <div class="projects-section-label divider"><span data-i18n="projects.more_personal_label">פרויקטים אישיים</span></div>
+        <div class="project-card projects-more-card">
+          <h3 data-i18n="projects.more_personal.title">רוצה לראות גם את הכלים שבניתי לעצמי?</h3>
+          <p data-i18n="projects.more_personal.desc">Video Controller, Memory Master, Tikunchik, WayCode ועוד נמצאים בדף הפרויקטים המלא.</p>
+          <a href="projects.html" class="btn btn-outline" data-i18n="projects.more_personal.btn">לכל הפרויקטים ←</a>
         </div>
 
       </div>
@@ -565,13 +438,13 @@
       <div class="hire-grid">
         <div class="hire-card">
           <div class="hire-icon">🌐</div>
-          <h3 data-i18n="hire.card1.title">אתר אישי / עסקי</h3>
-          <p data-i18n="hire.card1.desc">דף נחיתה, אתר פורטפוליו, אתר לעסק קטן — בהתאמה אישית.</p>
+          <h3 data-i18n="hire.card1.title">דף נחיתה / אתר קטן</h3>
+          <p data-i18n="hire.card1.desc">דף נחיתה, אתר תדמית, אתר הרשמה או עמוד שמציג רעיון בצורה ברורה.</p>
         </div>
         <div class="hire-card">
           <div class="hire-icon">🧩</div>
-          <h3 data-i18n="hire.card2.title">תוסף לכרום</h3>
-          <p data-i18n="hire.card2.desc">תוסף שיפתור בעיה ספציפית שיש לך בדפדפן.</p>
+          <h3 data-i18n="hire.card2.title">כלי מותאם לעסק</h3>
+          <p data-i18n="hire.card2.desc">מערכת קטנה, טופס חכם, דשבורד או כלי פנימי שמותאם בדיוק לתהליך שלך.</p>
         </div>
         <div class="hire-card">
           <div class="hire-icon">🤖</div>
@@ -580,8 +453,8 @@
         </div>
         <div class="hire-card">
           <div class="hire-icon">🛠️</div>
-          <h3 data-i18n="hire.card4.title">כלי / אפליקציה</h3>
-          <p data-i18n="hire.card4.desc">יש לך רעיון? בואו נבנה אותו ביחד.</p>
+          <h3 data-i18n="hire.card4.title">אפליקציה / מערכת</h3>
+          <p data-i18n="hire.card4.desc">אפליקציה פשוטה, מערכת ניהול או מוצר קטן שעוזר לאנשים לעבוד יותר נוח.</p>
         </div>
       </div>
 
