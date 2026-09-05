@@ -174,8 +174,45 @@
       <a href="contact.html" class="btn btn-outline" data-i18n="hero.cta_contact">צור קשר</a>
     </div>
 
+    <nav class="home-quick-nav" aria-label="ניווט מהיר">
+      <a href="#project-paths" data-i18n="home.nav.fit">מה מתאים לי?</a>
+      <a href="#projects" data-i18n="home.nav.projects">פרויקטים</a>
+      <a href="#hire" data-i18n="home.nav.services">שירותים</a>
+      <a href="#pricing" data-i18n="home.nav.pricing">מחיר</a>
+      <a href="#before-contact" data-i18n="home.nav.before">לפני שמדברים</a>
+    </nav>
+
     <div class="scroll-hint">
       <span></span>
+    </div>
+  </section>
+
+  <section id="project-paths" class="project-paths-section">
+    <div class="section-inner">
+      <div class="section-heading-row">
+        <div>
+          <h2 class="section-title" data-i18n="paths.title">מה אתה רוצה לבנות?</h2>
+          <p class="section-desc" data-i18n="paths.subtitle">בחירה מהירה שמובילה אותך לחלק הנכון באתר.</p>
+        </div>
+      </div>
+
+      <div class="project-paths">
+        <a href="#hire" class="path-card" data-path-filter="web">
+          <span class="path-icon">🌐</span>
+          <strong data-i18n="paths.web.title">אתר לעסק או רעיון</strong>
+          <small data-i18n="paths.web.desc">דף נחיתה, פורטפוליו או אתר קטן שמציג משהו ברור.</small>
+        </a>
+        <a href="#projects" class="path-card" data-path-filter="app">
+          <span class="path-icon">📱</span>
+          <strong data-i18n="paths.app.title">אפליקציה או כלי</strong>
+          <small data-i18n="paths.app.desc">מובייל, כלי פנימי, תוסף או מוצר קטן שעושה פעולה אמיתית.</small>
+        </a>
+        <a href="#hire" class="path-card" data-path-filter="automation">
+          <span class="path-icon">⚙️</span>
+          <strong data-i18n="paths.auto.title">אוטומציה עם AI</strong>
+          <small data-i18n="paths.auto.desc">משהו שחוסך עבודה ידנית, מחבר שירותים או עוזר לקבל החלטות.</small>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -276,12 +313,20 @@
       <h2 class="section-title" data-i18n="section.projects">פרויקטים</h2>
       <p class="section-desc" data-i18n="projects.subtitle">דברים שבניתי</p>
 
+      <div class="project-filters" aria-label="סינון פרויקטים">
+        <button class="project-filter active" type="button" data-filter="all" data-i18n="filters.all">הכול</button>
+        <button class="project-filter" type="button" data-filter="client" data-i18n="filters.client">לאחרים</button>
+        <button class="project-filter" type="button" data-filter="app" data-i18n="filters.apps">אפליקציות וכלים</button>
+        <button class="project-filter" type="button" data-filter="web" data-i18n="filters.web">אתרים</button>
+        <button class="project-filter" type="button" data-filter="dev" data-i18n="filters.dev">בפיתוח</button>
+      </div>
+
       <div class="projects-grid">
 
         <div class="projects-section-label"><span data-i18n="projects.others_label">דברים שבניתי לאחרים</span></div>
 
         <!-- תן לי יד - מערכת מלאה -->
-        <div class="project-card featured" data-project-id="ten-li-yad-platform" data-project-url="ten-li-yad-team-management.html">
+        <div class="project-card featured" data-project-id="ten-li-yad-platform" data-project-url="ten-li-yad-team-management.html" data-project-category="client app web automation">
           <div class="project-card-top">
             <img src="assets/images/ten-li-yad-logo-90.png" width="45" height="45" alt="תן לי יד לוגו" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">לאחרים</span>
@@ -316,7 +361,7 @@
         </div>
 
         <!-- תן לי יד - טופס הרשמה -->
-        <div class="project-card featured" data-project-id="ten-li-yad-registration" data-project-url="young-trainers-workshops.html">
+        <div class="project-card featured" data-project-id="ten-li-yad-registration" data-project-url="young-trainers-workshops.html" data-project-category="client web">
           <div class="project-card-top">
             <img src="assets/images/ten-li-yad-logo-90.png" width="45" height="45" alt="תן לי יד לוגו" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">לאחרים</span>
@@ -350,7 +395,7 @@
         <div class="projects-section-label divider"><span data-i18n="projects.my_label">הפרויקטים שלי</span></div>
 
         <!-- Video Controller -->
-        <div class="project-card featured" data-project-id="video-controller" data-project-url="video-controller.html">
+        <div class="project-card featured" data-project-id="video-controller" data-project-url="video-controller.html" data-project-category="app">
           <div class="project-card-top">
             <img src="assets/images/Video Controller-90.png" width="45" height="45" alt="Video Controller Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -390,7 +435,7 @@
         </div>
 
  <!-- mishmish -->
-        <div class="project-card featured" data-project-id="mishmish-site">
+        <div class="project-card featured" data-project-id="mishmish-site" data-project-category="web">
           <div class="project-card-top">
             <img src="assets/images/logo-full-nobg-90.png" width="45" height="45" alt="mishmish Logo" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -425,7 +470,7 @@
 
 
         <!-- WayCode -->
-        <div class="project-card featured" data-project-id="waycode" data-project-url="waycode.html">
+        <div class="project-card featured project-card-dev" data-project-id="waycode" data-project-url="waycode.html" data-project-category="app dev">
           <div class="project-card-top">
             <img src="assets/images/weycode-logo-90.png" width="45" height="45" alt="WayCode Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge" data-i18n="project.in_dev">בפיתוח</span>
@@ -452,7 +497,7 @@
         </div>
 
         <!-- Memory Master -->
-        <div class="project-card featured" data-project-id="memory-master" data-project-url="memory-master.html">
+        <div class="project-card featured" data-project-id="memory-master" data-project-url="memory-master.html" data-project-category="app">
           <div class="project-card-top">
             <img src="assets/images/memory master-90.png" width="45" height="45" alt="Memory Master Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -482,7 +527,7 @@
         </div>
 
         <!-- Tikunchik -->
-        <div class="project-card featured" data-project-id="tikunchik" data-project-url="tikunchik.html">
+        <div class="project-card featured" data-project-id="tikunchik" data-project-url="tikunchik.html" data-project-category="app">
           <div class="project-card-top">
             <img src="assets/images/tikunchik-logo-90.png" width="45" height="45" alt="Tikunchik Icon" class="project-icon-img" loading="lazy" decoding="async" style="width: 45px; height: 45px; object-fit: contain;">
             <span class="project-ai-badge">AI</span>
@@ -540,12 +585,12 @@
         </div>
       </div>
 
-      <div class="pricing-box">
+      <div class="pricing-box" id="pricing">
         <div class="pricing-copy">
           <span class="pricing-label" data-i18n="pricing.label">תמחור</span>
           <h3 data-i18n="pricing.title">כמה זה עולה?</h3>
           <p data-i18n="pricing.desc">
-            משלמים אחרי שרואים שזה עובד, עוזר, ומתאים למה שהיית צריך.
+            המחיר תלוי במה בונים ובאילו שירותים חיצוניים משתמשים. אני נותן הצעת מחיר ברורה אחרי שמבינים את הצורך.
           </p>
         </div>
         <div class="pricing-items">
@@ -561,6 +606,19 @@
         <p class="pricing-note" data-i18n="pricing.note">
           העלות החודשית משתנה לפי שימוש בכלים חיצוניים כמו AI, כתובת אתר/דומיין, אחסון, בסיס נתונים או שירותים נוספים.
         </p>
+      </div>
+
+      <div class="before-contact" id="before-contact">
+        <div class="before-contact-copy">
+          <span class="pricing-label" data-i18n="before.label">לפני שמדברים</span>
+          <h3 data-i18n="before.title">שלושה דברים שעוזרים להתחיל מהר</h3>
+          <p data-i18n="before.desc">לא צריך מסמך מסודר. מספיק לדעת מה רוצים לפתור, למי זה מיועד, ומה הכי חשוב שיקרה בגרסה הראשונה.</p>
+        </div>
+        <ul class="before-contact-list">
+          <li data-i18n="before.item1">מה הבעיה או הרעיון?</li>
+          <li data-i18n="before.item2">מי ישתמש בזה?</li>
+          <li data-i18n="before.item3">מה חייב לעבוד ביום הראשון?</li>
+        </ul>
       </div>
 
       <div class="hire-cta">

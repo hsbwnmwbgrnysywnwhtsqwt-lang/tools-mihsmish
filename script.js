@@ -536,3 +536,61 @@ document.querySelectorAll('[data-page-carousel]').forEach(carousel => {
   carousel.addEventListener('focusout', startAutoSlide);
   startAutoSlide();
 });
+
+function setProjectFilter(filter) {
+  const cards = [...document.querySelectorAll('.project-card[data-project-category]')];
+  if (!cards.length) return;
+
+  document.querySelectorAll('.project-filter').forEach(button => {
+    button.classList.toggle('active', button.getAttribute('data-filter') === filter);
+  });
+
+  cards.forEach(card => {
+    const categories = (card.getAttribute('data-project-category') || '').split(/\s+/);
+    const show = filter === 'all' || categories.includes(filter);
+    card.classList.toggle('project-hidden', !show);
+  });
+
+  document.querySelectorAll('.projects-section-label').forEach(label => {
+    let sibling = label.nextElementSibling;
+    let hasVisibleCard = false;
+    while (sibling && !sibling.classList.contains('projects-section-label')) {
+      if (sibling.matches?.('.project-card') && !sibling.classList.contains('project-hidden')) {
+        hasVisibleCard = true;
+        break;
+      }
+      sibling = sibling.nextElementSibling;
+    }
+    label.classList.toggle('project-hidden', !hasVisibleCard);
+  });
+}
+
+document.querySelectorAll('.project-filter').forEach(button => {
+  button.addEventListener('click', () => setProjectFilter(button.getAttribute('data-filter') || 'all'));
+});
+
+document.querySelectorAll('[data-path-filter]').forEach(card => {
+  card.addEventListener('click', () => {
+    const filter = card.getAttribute('data-path-filter');
+    if (filter) window.setTimeout(() => setProjectFilter(filter), 250);
+  });
+});
+
+function injectFloatingWhatsapp() {
+  if (document.querySelector('.floating-whatsapp')) return;
+  const lang = typeof detectLang === 'function' ? detectLang() : getProjectLang();
+  const label = TRANSLATIONS?.[lang]?.['floating.whatsapp'] || TRANSLATIONS.he['floating.whatsapp'];
+  const link = document.createElement('a');
+  link.className = 'floating-whatsapp';
+  link.href = 'https://wa.me/972535237474';
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.setAttribute('aria-label', label);
+  link.innerHTML = `
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3.2A12.7 12.7 0 0 0 5.08 22.36L3.5 28.5l6.28-1.5A12.7 12.7 0 1 0 16.02 3.2Zm0 2.25a10.45 10.45 0 1 1 0 20.9c-1.83 0-3.55-.47-5.05-1.3l-.38-.22-3.74.9.94-3.64-.25-.4a10.45 10.45 0 0 1 8.48-16.24Zm-4.1 5.38c-.22-.5-.45-.5-.66-.51h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.46s1.06 2.86 1.2 3.06c.15.2 2.05 3.3 5.05 4.5 2.5 1 3 .8 3.55.75.55-.05 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.92-2.18Z"/></svg>
+    <span data-i18n="floating.whatsapp">${label}</span>
+  `;
+  document.body.appendChild(link);
+}
+
+injectFloatingWhatsapp();

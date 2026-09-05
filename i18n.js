@@ -26,6 +26,19 @@ const TRANSLATIONS = {
     'hero.subtitle':      'Building small tools',
     'hero.cta_projects':  'הפרויקטים שלי ↓',
     'hero.cta_contact':   'צור קשר',
+    'home.nav.fit':       'מה מתאים לי?',
+    'home.nav.projects':  'פרויקטים',
+    'home.nav.services':  'שירותים',
+    'home.nav.pricing':   'מחיר',
+    'home.nav.before':    'לפני שמדברים',
+    'paths.title':        'מה אתה רוצה לבנות?',
+    'paths.subtitle':     'בחירה מהירה שמובילה אותך לחלק הנכון באתר.',
+    'paths.web.title':    'אתר לעסק או רעיון',
+    'paths.web.desc':     'דף נחיתה, פורטפוליו או אתר קטן שמציג משהו ברור.',
+    'paths.app.title':    'אפליקציה או כלי',
+    'paths.app.desc':     'מובייל, כלי פנימי, תוסף או מוצר קטן שעושה פעולה אמיתית.',
+    'paths.auto.title':   'אוטומציה עם AI',
+    'paths.auto.desc':    'משהו שחוסך עבודה ידנית, מחבר שירותים או עוזר לקבל החלטות.',
 
     // --- About section (index) ---
     'section.about':       'אודות',
@@ -51,6 +64,11 @@ const TRANSLATIONS = {
     'projects.subtitle':      'דברים שבניתי',
     'projects.my_label':      'הפרויקטים שלי',
     'projects.others_label':  'דברים שבניתי לאחרים',
+    'filters.all':            'הכול',
+    'filters.client':         'לאחרים',
+    'filters.apps':           'אפליקציות וכלים',
+    'filters.web':            'אתרים',
+    'filters.dev':            'בפיתוח',
 
     // --- Project cards ---
     'vc.desc':            'תוסף כרום שנותן לך שליטה מלאה על סרטונים בכל אתר — מהירות השמעה, קיצורי מקלדת, ועוד. זמין בחנות הכרום הרשמית.',
@@ -87,15 +105,22 @@ const TRANSLATIONS = {
     'hire.card4.desc':    'יש לך רעיון? בואו נבנה אותו ביחד.',
     'pricing.label':      'תמחור',
     'pricing.title':      'כמה זה עולה?',
-    'pricing.desc':       'משלמים אחרי שרואים שזה עובד, עוזר, ומתאים למה שהיית צריך.',
+    'pricing.desc':       'המחיר תלוי במה בונים ובאילו שירותים חיצוניים משתמשים. אני נותן הצעת מחיר ברורה אחרי שמבינים את הצורך.',
     'pricing.setup.label': 'הקמה חד-פעמית',
     'pricing.setup.price': '₪300-₪700',
     'pricing.monthly.label': 'תחזוקה חודשית',
     'pricing.monthly.price': '₪20-₪100',
     'pricing.note':       'העלות החודשית משתנה לפי שימוש בכלים חיצוניים כמו AI, כתובת אתר/דומיין, אחסון, בסיס נתונים או שירותים נוספים.',
+    'before.label':       'לפני שמדברים',
+    'before.title':       'שלושה דברים שעוזרים להתחיל מהר',
+    'before.desc':        'לא צריך מסמך מסודר. מספיק לדעת מה רוצים לפתור, למי זה מיועד, ומה הכי חשוב שיקרה בגרסה הראשונה.',
+    'before.item1':       'מה הבעיה או הרעיון?',
+    'before.item2':       'מי ישתמש בזה?',
+    'before.item3':       'מה חייב לעבוד ביום הראשון?',
     'hire.cta.desc':      'תמחור שקוף, תקשורת ישירה, עבודה מהירה.',
     'hire.cta.btn':       'שלח לי הודעה ←',
     'hire.cta.whatsapp':  'שלח WhatsApp',
+    'floating.whatsapp':  'דבר איתי ב-WhatsApp',
 
     // --- About page ---
     'about.hero.label':   'אודות',
@@ -215,6 +240,19 @@ const TRANSLATIONS = {
     'hero.subtitle':      'Building small tools',
     'hero.cta_projects':  'My Projects ↓',
     'hero.cta_contact':   'Contact',
+    'home.nav.fit':       'What fits me?',
+    'home.nav.projects':  'Projects',
+    'home.nav.services':  'Services',
+    'home.nav.pricing':   'Pricing',
+    'home.nav.before':    'Before Contact',
+    'paths.title':        'What do you want to build?',
+    'paths.subtitle':     'A quick choice that takes you to the right part of the site.',
+    'paths.web.title':    'Website for a business or idea',
+    'paths.web.desc':     'Landing page, portfolio or small website that explains something clearly.',
+    'paths.app.title':    'App or tool',
+    'paths.app.desc':     'Mobile, internal tool, extension or small product that performs a real action.',
+    'paths.auto.title':   'AI automation',
+    'paths.auto.desc':    'Something that saves manual work, connects services or helps make decisions.',
 
     // --- About section (index) ---
     'section.about':       'About',
@@ -240,6 +278,11 @@ const TRANSLATIONS = {
     'projects.subtitle':      'Things I\'ve built',
     'projects.my_label':      'My Projects',
     'projects.others_label':  'Built for Others',
+    'filters.all':            'All',
+    'filters.client':         'For Clients',
+    'filters.apps':           'Apps & Tools',
+    'filters.web':            'Websites',
+    'filters.dev':            'In Development',
 
     // --- Project cards ---
     'vc.desc':            'A Chrome extension that gives you full control over videos on any site — playback speed, keyboard shortcuts, and more. Available on the official Chrome Web Store.',
@@ -276,15 +319,22 @@ const TRANSLATIONS = {
     'hire.card4.desc':    'Got an idea? Let\'s build it together.',
     'pricing.label':      'Pricing',
     'pricing.title':      'How much does it cost?',
-    'pricing.desc':       'You pay after seeing that it works, helps, and fits what you needed.',
+    'pricing.desc':       'The price depends on what we build and which external services it uses. I give a clear quote after we understand the need.',
     'pricing.setup.label': 'One-time setup',
     'pricing.setup.price': '₪300-₪700',
     'pricing.monthly.label': 'Monthly maintenance',
     'pricing.monthly.price': '₪20-₪100',
     'pricing.note':       'The monthly cost changes based on external tools such as AI, a website address/domain, hosting, database usage, or other services.',
+    'before.label':       'Before Contact',
+    'before.title':       'Three things that help us start fast',
+    'before.desc':        'No formal brief is needed. It is enough to know what you want to solve, who it is for, and what must work in the first version.',
+    'before.item1':       'What is the problem or idea?',
+    'before.item2':       'Who will use it?',
+    'before.item3':       'What must work on day one?',
     'hire.cta.desc':      'Transparent pricing, direct communication, fast delivery.',
     'hire.cta.btn':       'Send me a message ←',
     'hire.cta.whatsapp':  'Send WhatsApp',
+    'floating.whatsapp':  'Talk on WhatsApp',
 
     // --- About page ---
     'about.hero.label':   'About',
@@ -415,6 +465,11 @@ function applyLang(lang) {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
+
+  const floatingWhatsapp = document.querySelector('.floating-whatsapp');
+  if (floatingWhatsapp && t['floating.whatsapp']) {
+    floatingWhatsapp.setAttribute('aria-label', t['floating.whatsapp']);
+  }
 
   // Translate placeholders
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
