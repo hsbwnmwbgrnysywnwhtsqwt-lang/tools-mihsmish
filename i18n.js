@@ -92,9 +92,10 @@ const TRANSLATIONS = {
     'pricing.setup.price': '₪300-₪700',
     'pricing.monthly.label': 'תחזוקה חודשית',
     'pricing.monthly.price': '₪20-₪100',
-    'pricing.note':       'העלות החודשית משתנה לפי שימוש בכלים חיצוניים כמו AI, WhatsApp API, כתובת אתר/דומיין, אחסון, בסיס נתונים או שירותים נוספים.',
+    'pricing.note':       'העלות החודשית משתנה לפי שימוש בכלים חיצוניים כמו AI, כתובת אתר/דומיין, אחסון, בסיס נתונים או שירותים נוספים.',
     'hire.cta.desc':      'תמחור שקוף, תקשורת ישירה, עבודה מהירה.',
     'hire.cta.btn':       'שלח לי הודעה ←',
+    'hire.cta.whatsapp':  'שלח WhatsApp',
 
     // --- About page ---
     'about.hero.label':   'אודות',
@@ -126,7 +127,7 @@ const TRANSLATIONS = {
     // --- Contact page ---
     'contact.title':               'צור קשר',
     'contact.subtitle':            'רוצה לדבר, להזמין עבודה, או סתם לשלוח שלום?',
-    'contact.info.title':          'בואו נדבר 👋',
+    'contact.info.title':          'בואו נדבר',
     'contact.info.text':           'רוצה שאבנה לך אתר, כלי, תוסף או כל דבר אחר? יש לך שאלה, באג, או סתם רוצה להגיד שלום? אני שמח לשמוע!',
     'contact.gmail':               'שלח מייל דרך Gmail',
     'contact.email_client':        'שלח מייל דרך תוכנת המייל',
@@ -136,7 +137,7 @@ const TRANSLATIONS = {
     'contact.form.email.label':    'אימייל',
     'contact.form.message.label':  'הודעה',
     'contact.form.message.ph':     'כתוב כאן...',
-    'contact.form.submit':         'שלח הודעה ✉️',
+    'contact.form.submit':         'שלח הודעה',
 
     // --- Projects page ---
     'projects.hero.label':   'הפרויקטים שלי',
@@ -146,6 +147,7 @@ const TRANSLATIONS = {
     'projects.cta.subtitle': 'יש לך רעיון? בואו נדבר.',
     'projects.cta.btn1':     'צור קשר ←',
     'projects.cta.btn2':     'השירותים שלי ↓',
+    'projects.cta.whatsapp': 'שלח WhatsApp',
     'projects.tlyd.platform.name': 'תן לי יד — ניהול צוות',
     'projects.tlyd.platform.desc': 'מערכת מלאה לארגון "תן לי יד", עם אפליקציות iOS ו-Android למדריכים ואתר ניהול למנהלים. כוללת התחברות, דיווח שעות, שיבוצים, אישור חודשי, שכר, תזכורות, דשבורד ניהולי, ניהול צוות, מסגרות וכלבים, חשבוניות, חוסרים, חפיפות ועוזר חכם בעברית שמציע פעולות רק אחרי אישור אנושי.',
     'projects.tlyd.mgmt.name': 'תן לי יד — מערכת ניהול',
@@ -279,9 +281,10 @@ const TRANSLATIONS = {
     'pricing.setup.price': '₪300-₪700',
     'pricing.monthly.label': 'Monthly maintenance',
     'pricing.monthly.price': '₪20-₪100',
-    'pricing.note':       'The monthly cost changes based on external tools such as AI, WhatsApp API, a website address/domain, hosting, database usage, or other services.',
+    'pricing.note':       'The monthly cost changes based on external tools such as AI, a website address/domain, hosting, database usage, or other services.',
     'hire.cta.desc':      'Transparent pricing, direct communication, fast delivery.',
     'hire.cta.btn':       'Send me a message ←',
+    'hire.cta.whatsapp':  'Send WhatsApp',
 
     // --- About page ---
     'about.hero.label':   'About',
@@ -313,7 +316,7 @@ const TRANSLATIONS = {
     // --- Contact page ---
     'contact.title':               'Contact',
     'contact.subtitle':            'Want to chat, commission work, or just say hi?',
-    'contact.info.title':          'Let\'s Talk 👋',
+    'contact.info.title':          'Let\'s Talk',
     'contact.info.text':           'Want me to build you a website, tool, extension or anything else? Have a question, a bug, or just want to say hello? I\'d love to hear from you!',
     'contact.gmail':               'Send email via Gmail',
     'contact.email_client':        'Send email via mail app',
@@ -323,7 +326,7 @@ const TRANSLATIONS = {
     'contact.form.email.label':    'Email',
     'contact.form.message.label':  'Message',
     'contact.form.message.ph':     'Write here...',
-    'contact.form.submit':         'Send Message ✉️',
+    'contact.form.submit':         'Send Message',
 
     // --- Projects page ---
     'projects.hero.label':   'My Projects',
@@ -333,6 +336,7 @@ const TRANSLATIONS = {
     'projects.cta.subtitle': 'Got an idea? Let\'s talk.',
     'projects.cta.btn1':     'Contact ←',
     'projects.cta.btn2':     'My Services ↓',
+    'projects.cta.whatsapp': 'Send WhatsApp',
     'projects.tlyd.platform.name': 'Ten Li Yad — Team Management',
     'projects.tlyd.platform.desc': 'A full platform for the Ten Li Yad organization, with iOS and Android apps for instructors plus a web management system for admins. It includes sign-in, time reports, scheduling, monthly confirmation, salary, reminders, admin dashboards, team, framework and dog management, invoices, gaps, overlaps and a Hebrew smart assistant that proposes actions only after human approval.',
     'projects.tlyd.mgmt.name': 'Ten Li Yad — Management System',

@@ -304,6 +304,33 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+.btn-whatsapp {
+  background: #25D366;
+  color: #083d1f;
+  border-color: #25D366;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.28);
+}
+
+.btn-whatsapp:hover {
+  background: #1fbd5a;
+  border-color: #1fbd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.34);
+}
+
+.btn-icon-svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+}
+
+.btn-icon-svg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
 .beta-hero .btn-outline {
   color: rgba(255,255,255,0.92);
   border-color: rgba(255,255,255,0.24);
@@ -1008,6 +1035,10 @@ body.modal-open {
   box-shadow: var(--shadow-lg);
 }
 
+.project-page-slide[hidden] {
+  display: none;
+}
+
 .project-page-slide img {
   display: block;
   width: 100%;
@@ -1202,7 +1233,26 @@ body.modal-open {
   background: rgba(244,162,45,0.08);
   border-color: rgba(244,162,45,0.2);
 }
-.contact-link-icon { font-size: 1.1rem; }
+.contact-link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+}
+
+.contact-link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+.contact-link-icon.brand-whatsapp { color: #25D366; }
+.contact-link-icon.brand-chrome { color: #fbbc05; }
+.contact-link-icon.brand-facebook { color: #1877F2; }
 
 /* טופס */
 .contact-form { display: flex; flex-direction: column; gap: 1rem; }
@@ -1456,6 +1506,12 @@ footer span { color: var(--orange); font-weight: 600; }
 .hire-cta p {
   color: var(--text-light);
   font-size: 0.97rem;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* ===== Beta Page ===== */

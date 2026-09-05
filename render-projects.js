@@ -39,11 +39,13 @@ export async function renderProjectsGrid(gridId) {
   const mine = projects.filter(p => p.category === "mine");
   const others = projects.filter(p => p.category === "others");
 
-  let html = `<div class="projects-section-label"><span>הפרויקטים שלי</span></div>`;
-  html += mine.map(renderProject).join("");
-  if (others.length) {
-    html += `<div class="projects-section-label divider"><span>דברים שבניתי לאחרים</span></div>`;
-    html += others.map(renderProject).join("");
-  }
+  const sections = [
+    { label: "דברים שבניתי לאחרים", projects: others },
+    { label: "הפרויקטים שלי", projects: mine },
+  ].filter(section => section.projects.length);
+  const html = sections.map((section, index) =>
+    `<div class="projects-section-label${index ? " divider" : ""}"><span>${section.label}</span></div>` +
+    section.projects.map(renderProject).join("")
+  ).join("");
   grid.innerHTML = html;
 }

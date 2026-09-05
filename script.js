@@ -485,10 +485,14 @@ document.querySelectorAll('[data-page-carousel]').forEach(carousel => {
   const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
   if (slides.length <= 1) carousel.classList.add('single-slide');
   const setActive = index => {
+    slides.forEach((slide, slideIndex) => {
+      slide.hidden = slideIndex !== index;
+      slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+    });
     dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
   };
   const goToSlide = index => {
-    slides[index]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    if (!slides[index]) return;
     setActive(index);
   };
   const getCurrentSlide = () => {
@@ -524,15 +528,7 @@ document.querySelectorAll('[data-page-carousel]').forEach(carousel => {
     });
   });
 
-  track?.addEventListener('scroll', () => {
-    const trackCenter = track.scrollLeft + track.clientWidth / 2;
-    const closest = slides.reduce((best, slide, index) => {
-      const center = slide.offsetLeft + slide.clientWidth / 2;
-      const distance = Math.abs(center - trackCenter);
-      return distance < best.distance ? { index, distance } : best;
-    }, { index: 0, distance: Infinity });
-    setActive(closest.index);
-  }, { passive: true });
+  setActive(getCurrentSlide());
 
   carousel.addEventListener('mouseenter', () => clearInterval(autoSlideTimer));
   carousel.addEventListener('mouseleave', startAutoSlide);
