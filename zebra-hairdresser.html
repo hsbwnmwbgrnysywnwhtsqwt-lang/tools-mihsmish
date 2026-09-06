@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מספרת זברה — מערכת תורים | mishmish</title>
+  <meta name="description" content="מספרת זברה — מערכת קביעת תורים וניהול למספרה, עם בחירת שירות, תאריך ושעה, וואטסאפ, הוראות הגעה וחיבור ל-Google Calendar." />
+  <link rel="canonical" href="https://www.tools-mishmish.com/zebra-hairdresser.html" />
+  <meta property="og:title" content="מספרת זברה — מערכת תורים" />
+  <meta property="og:description" content="מערכת קביעת תורים למספרה, עם אתר לקוחות, ניהול תורים, וואטסאפ, הוראות הגעה וחיבור ל-Google Calendar." />
+  <meta property="og:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/zebra-home.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tools-mishmish.com/zebra-hairdresser.html" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="mishmish" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="מספרת זברה — מערכת תורים" />
+  <meta name="twitter:description" content="מערכת קביעת תורים וניהול למספרה, עם אתר לקוחות, אפליקציית ניהול וחיבור ליומן." />
+  <meta name="twitter:image" content="https://www.tools-mishmish.com/assets/images/project-screenshots/zebra-home.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/logo-icon-nobg.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-icon-nobg.png" />
+</head>
+<body class="zebra-detail-page">
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo-icon-nobg-76.png" width="38" height="38" alt="mishmish לוגו" decoding="async" />
+      <span>mishmish</span>
+    </a>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="about.html" data-i18n="nav.about">אודות</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">צור קשר</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">פרויקטים</a></li>
+      <li><a href="index.html" style="color:var(--orange);" data-i18n="nav.back_home">← חזור לדף הבית</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="project-detail-hero">
+    <div class="project-detail-hero-inner">
+      <div>
+        <span class="project-detail-label">פרויקט ללקוח</span>
+        <h1 class="project-detail-title">מספרת זברה — מערכת תורים</h1>
+        <p class="project-detail-summary">
+          מערכת קביעת תורים למספרה. הלקוחות יכולים לבחור שירות, תאריך ושעה,
+          לקבוע תור או לפנות בוואטסאפ, והעסק מקבל ניהול מסודר של התורים מאחורי הקלעים.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Google Calendar</span>
+          <span class="tag">WhatsApp</span>
+          <span class="tag">Android</span>
+        </div>
+      </div>
+
+      <div class="project-page-carousel" data-page-carousel>
+        <button class="project-carousel-btn prev" type="button" data-carousel-move="-1" aria-label="תמונה קודמת">‹</button>
+        <div class="project-page-carousel-track" data-carousel-track>
+          <figure class="project-page-slide" data-carousel-slide>
+            <img src="assets/images/project-screenshots/zebra-home.jpg" alt="מסך הבית של מספרת זברה" loading="lazy" decoding="async" />
+            <figcaption>דף פתיחה וקביעת תור</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide hidden>
+            <img src="assets/images/project-screenshots/zebra-date.jpg" alt="בחירת תאריך פנוי במספרת זברה" loading="lazy" decoding="async" />
+            <figcaption>בחירת תאריך פנוי</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide hidden>
+            <img src="assets/images/project-screenshots/zebra-time.jpg" alt="בחירת שעה פנויה במספרת זברה" loading="lazy" decoding="async" />
+            <figcaption>בחירת שעה פנויה</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide hidden>
+            <img src="assets/images/project-screenshots/zebra-book.jpg" alt="טופס קביעת תור במספרת זברה" loading="lazy" decoding="async" />
+            <figcaption>קביעת תור ויצירת קשר</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide hidden>
+            <img src="assets/images/project-screenshots/zebra-mobile-home.jpg" alt="מסך הבית של מספרת זברה בטלפון" loading="lazy" decoding="async" />
+            <figcaption>מסך בית במובייל</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide hidden>
+            <img src="assets/images/project-screenshots/zebra-admin-mobile.jpg" alt="מסך ניהול יומן באפליקציית מספרת זברה" loading="lazy" decoding="async" />
+            <figcaption>ניהול יומן באפליקציה</figcaption>
+          </figure>
+          <figure class="project-page-slide" data-carousel-slide hidden>
+            <img src="assets/images/project-screenshots/zebra-directions.jpg" alt="הוראות הגעה למספרת זברה" loading="lazy" decoding="async" />
+            <figcaption>הוראות הגעה וניווט</figcaption>
+          </figure>
+        </div>
+        <button class="project-carousel-btn next" type="button" data-carousel-move="1" aria-label="תמונה הבאה">›</button>
+        <div class="project-carousel-dots">
+          <button class="project-carousel-dot active" type="button" data-carousel-dot aria-label="תמונה 1"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 2"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 3"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 4"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 5"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 6"></button>
+          <button class="project-carousel-dot" type="button" data-carousel-dot aria-label="תמונה 7"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-body">
+    <div class="project-detail-content">
+      <h2>תיאור הפרויקט</h2>
+      <p>
+        מספרת זברה היא מערכת תורים שבנויה סביב התהליך של מספרה: בחירת שירות,
+        הצגת ימים ושעות פנויות, קביעת תור, יצירת קשר מהירה והוראות הגעה ללקוח.
+      </p>
+      <p>
+        בצד הניהול יש יומן תורים, לקוחות, שירותים ושעות פעילות. המערכת מחוברת ל-Firebase,
+        מסתנכרנת עם Google Calendar, וכוללת התראות ותזכורות כדי שהעסק יוכל לעבוד מסודר.
+      </p>
+
+      <div class="project-detail-points">
+        <div class="project-detail-point">
+          <h3>קביעת תור ללקוח</h3>
+          <p>בחירת שירות, תאריך ושעה מתוך זמינות אמיתית, בלי שיחה ידנית על כל תור.</p>
+        </div>
+        <div class="project-detail-point">
+          <h3>ניהול לעסק</h3>
+          <p>יומן, לקוחות, שירותים ושעות פעילות במקום אחד, כולל אפשרות לסגור ימים או שעות.</p>
+        </div>
+        <div class="project-detail-point">
+          <h3>חיבורים חיצוניים</h3>
+          <p>Firebase, Google Calendar, וואטסאפ, ניווט עם Waze ו-Google Maps והתראות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/images/logo-full-nobg-90.png" width="44" height="44" alt="mishmish" loading="lazy" decoding="async" />
+      <p><span>mishmish</span> &copy; 2025 &nbsp;·&nbsp; מיכאל לב &nbsp;·&nbsp; Building small tools</p>
+      <div class="footer-links">
+        <a href="projects.html" data-i18n="nav.projects">פרויקטים</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">מדיניות פרטיות</a>
+        <a href="terms.html" data-i18n="footer.terms">תנאי שימוש</a>
+        <a href="mailto:levmishmish14@gmail.com">levmishmish14@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

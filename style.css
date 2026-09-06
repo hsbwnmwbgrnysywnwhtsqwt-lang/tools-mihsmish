@@ -799,6 +799,12 @@ section {
   transform: scale(1.03);
 }
 
+.project-card[data-project-id="zebra-hairdresser"] .project-preview img,
+.project-card[data-project-id="ten-li-yad-platform"] .project-preview img,
+.zebra-detail-page .project-page-slide img {
+  filter: sepia(0.09) brightness(0.98) contrast(1.03) saturate(1.04);
+}
+
 .project-desc {
   font-size: 0.91rem;
   color: var(--text-light);
@@ -2221,4 +2227,38 @@ footer span { color: var(--orange); font-weight: 600; }
     padding: 2px 7px;
     font-size: 0.72rem;
   }
+}
+
+/* One WhatsApp control moves between the floating corner and its page slot. */
+.floating-whatsapp {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  justify-content: center;
+  transform-origin: top left;
+}
+.floating-whatsapp:not(.is-docked) span { display: none; }
+.back-to-top {
+  position: fixed;
+  right: 1.1rem;
+  bottom: calc(5.2rem + env(safe-area-inset-bottom, 0px));
+  z-index: 899;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d5e3db;
+  border-radius: 50%;
+  background: #fff;
+  color: #083d1f;
+  box-shadow: 0 4px 16px #1a3a2a22;
+  cursor: pointer;
+}
+.back-to-top[hidden] { display: none; }
+.back-to-top svg { width: 22px; height: 22px; }
+.back-to-top:hover { background: #eaf8ee; }
+.back-to-top:focus-visible, .floating-whatsapp:focus-visible { outline: 3px solid #147a42; outline-offset: 4px; }
+.floating-whatsapp:not(.is-docked) { bottom: calc(1.1rem + env(safe-area-inset-bottom, 0px)); }
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp { transition: none; }
 }

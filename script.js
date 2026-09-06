@@ -211,6 +211,49 @@ const PROJECT_DETAILS = {
           caption: 'דף פתיחה, מילוי פרטים ויצירת קשר'
         }
       ]
+    },
+    'zebra-hairdresser': {
+      title: 'מספרת זברה — מערכת תורים',
+      short: 'מערכת קביעת תורים וניהול למספרה.',
+      long: 'מערכת שנבנתה למספרת זברה. הלקוח יכול לבחור שירות, לראות תאריכים ושעות פנויות, לקבוע תור, ליצור קשר בוואטסאפ ולקבל הוראות הגעה. בצד העסק יש ניהול תורים, לקוחות, שירותים ושעות פעילות, עם חיבור ל-Firebase, Google Calendar והתראות.',
+      tags: ['Next.js', 'Firebase', 'Google Calendar', 'WhatsApp', 'Android'],
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/zebra-home.jpg',
+          alt: 'מסך הבית של מערכת התורים מספרת זברה',
+          caption: 'דף פתיחה וקביעת תור'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-date.jpg',
+          alt: 'בחירת תאריך במערכת התורים מספרת זברה',
+          caption: 'בחירת תאריך פנוי'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-time.jpg',
+          alt: 'בחירת שעה במערכת התורים מספרת זברה',
+          caption: 'בחירת שעה פנויה'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-book.jpg',
+          alt: 'טופס קביעת תור במספרת זברה',
+          caption: 'קביעת תור ויצירת קשר'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-mobile-home.jpg',
+          alt: 'מסך הבית של מספרת זברה בטלפון',
+          caption: 'מסך בית במובייל'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-admin-mobile.jpg',
+          alt: 'מסך ניהול יומן באפליקציית מספרת זברה',
+          caption: 'ניהול יומן באפליקציה'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-directions.jpg',
+          alt: 'מסך הוראות הגעה למספרת זברה',
+          caption: 'הוראות הגעה וניווט'
+        }
+      ]
     }
   },
   en: {
@@ -332,6 +375,49 @@ const PROJECT_DETAILS = {
           src: 'assets/images/project-screenshots/meitar-hero.jpg',
           alt: 'Meitar website',
           caption: 'Hero page, details form and contact flow'
+        }
+      ]
+    },
+    'zebra-hairdresser': {
+      title: 'Zebra Hairdresser — Booking System',
+      short: 'Appointment booking and management for a hair salon.',
+      long: 'A system built for Zebra Hairdresser. Clients can choose a service, see available dates and times, book an appointment, contact by WhatsApp and get directions. The business side includes appointment, client, service and working-hours management, with Firebase, Google Calendar and notifications.',
+      tags: ['Next.js', 'Firebase', 'Google Calendar', 'WhatsApp', 'Android'],
+      screenshots: [
+        {
+          src: 'assets/images/project-screenshots/zebra-home.jpg',
+          alt: 'Zebra Hairdresser booking home screen',
+          caption: 'Home page and appointment booking'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-date.jpg',
+          alt: 'Date selection in Zebra Hairdresser booking',
+          caption: 'Available date selection'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-time.jpg',
+          alt: 'Time selection in Zebra Hairdresser booking',
+          caption: 'Available time selection'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-book.jpg',
+          alt: 'Booking form in Zebra Hairdresser',
+          caption: 'Booking and contact flow'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-mobile-home.jpg',
+          alt: 'Zebra Hairdresser mobile home screen',
+          caption: 'Mobile home screen'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-admin-mobile.jpg',
+          alt: 'Zebra Hairdresser admin calendar app',
+          caption: 'Calendar management in the app'
+        },
+        {
+          src: 'assets/images/project-screenshots/zebra-directions.jpg',
+          alt: 'Directions screen for Zebra Hairdresser',
+          caption: 'Directions and navigation'
         }
       ]
     }
@@ -642,6 +728,81 @@ function injectFloatingWhatsapp() {
     <span data-i18n="floating.whatsapp">${label}</span>
   `;
   document.body.appendChild(link);
+  const defaultHref = link.href;
+  let dockedTarget = null;
+  let animation;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function updateDock() {
+    const navBottom = Math.max(0, document.querySelector('.navbar')?.getBoundingClientRect().bottom || 0);
+    const targets = [...document.querySelectorAll('a[href]')].filter(target => {
+      if (target === link) return false;
+      const url = new URL(target.href, location.href);
+      return ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname) || url.protocol === 'whatsapp:';
+    });
+    const visibleTargets = targets.filter(target => {
+      const rect = target.getBoundingClientRect();
+      return getComputedStyle(target).visibility !== 'hidden' && rect.width > 0 && rect.height > 0 &&
+        rect.bottom > navBottom && rect.top < window.innerHeight &&
+        rect.right > 0 && rect.left < window.innerWidth;
+    });
+    // Stay with the current button while it is visible to avoid jumping between links.
+    const nextTarget = visibleTargets.includes(dockedTarget) ? dockedTarget : visibleTargets[0] || null;
+    if (nextTarget === dockedTarget) return;
+    const before = dockedTarget?.getBoundingClientRect() || link.getBoundingClientRect();
+    animation?.cancel();
+    dockedTarget = nextTarget;
+    if (nextTarget && document.activeElement === link) nextTarget.focus({ preventScroll: true });
+    link.style.visibility = '';
+    link.href = nextTarget?.href || defaultHref;
+    const corner = link.getBoundingClientRect();
+    const destination = nextTarget?.getBoundingClientRect() || corner;
+    const frame = rect => ({
+      transform: `translate(${rect.left - corner.left}px, ${rect.top - corner.top}px) scale(${rect.width / corner.width}, ${rect.height / corner.height})`
+    });
+    if (reducedMotion.matches) {
+      link.style.visibility = nextTarget ? 'hidden' : '';
+      return;
+    }
+    animation = link.animate([frame(before), frame(destination)], {
+      duration: 420, easing: 'cubic-bezier(.22,1,.36,1)'
+    });
+    animation.onfinish = () => {
+      // The original link keeps its text, destination, layout and keyboard access.
+      link.style.visibility = dockedTarget ? 'hidden' : '';
+    };
+  }
+  let scheduled = false;
+  function scheduleDock() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => { scheduled = false; updateDock(); });
+  }
+  window.addEventListener('scroll', scheduleDock, { passive: true });
+  window.addEventListener('resize', scheduleDock);
+  new ResizeObserver(scheduleDock).observe(document.body);
+  updateDock();
 }
 
 injectFloatingWhatsapp();
+
+// Keep a separate route back to the beginning, including while WhatsApp is docked.
+const backToTop = document.createElement('button');
+backToTop.className = 'back-to-top';
+backToTop.type = 'button';
+backToTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 12 6-6 6 6M12 6v14"/></svg>';
+document.body.appendChild(backToTop);
+function updateBackToTop() {
+  backToTop.hidden = window.scrollY < 300;
+  backToTop.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Back to top' : 'חזרה למעלה');
+}
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  const heading = document.querySelector('h1');
+  if (heading) {
+    heading.setAttribute('tabindex', '-1');
+    heading.focus({ preventScroll: true });
+  }
+});
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+new MutationObserver(updateBackToTop).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+updateBackToTop();
