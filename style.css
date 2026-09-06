@@ -2262,3 +2262,15 @@ footer span { color: var(--orange); font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   .floating-whatsapp { transition: none; }
 }
+
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    right: max(.85rem, env(safe-area-inset-right, 0px));
+    width: 48px;
+    height: 48px;
+  }
+  .back-to-top {
+    right: max(.85rem, env(safe-area-inset-right, 0px));
+    bottom: calc(4.8rem + env(safe-area-inset-bottom, 0px));
+  }
+}

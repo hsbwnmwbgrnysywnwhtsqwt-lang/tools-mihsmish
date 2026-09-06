@@ -733,7 +733,10 @@ function injectFloatingWhatsapp() {
   let animation;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   function updateDock() {
-    const navBottom = Math.max(0, document.querySelector('.navbar')?.getBoundingClientRect().bottom || 0);
+    const viewport = window.visualViewport;
+    const viewportTop = viewport?.offsetTop || 0;
+    const viewportBottom = viewportTop + (viewport?.height || window.innerHeight);
+    const navBottom = Math.max(viewportTop, document.querySelector('.navbar')?.getBoundingClientRect().bottom || 0);
     const targets = [...document.querySelectorAll('a[href]')].filter(target => {
       if (target === link) return false;
       const url = new URL(target.href, location.href);
@@ -742,7 +745,7 @@ function injectFloatingWhatsapp() {
     const visibleTargets = targets.filter(target => {
       const rect = target.getBoundingClientRect();
       return getComputedStyle(target).visibility !== 'hidden' && rect.width > 0 && rect.height > 0 &&
-        rect.bottom > navBottom && rect.top < window.innerHeight &&
+        rect.bottom > navBottom && rect.top < viewportBottom &&
         rect.right > 0 && rect.left < window.innerWidth;
     });
     // Stay with the current button while it is visible to avoid jumping between links.
@@ -757,14 +760,19 @@ function injectFloatingWhatsapp() {
     const corner = link.getBoundingClientRect();
     const destination = nextTarget?.getBoundingClientRect() || corner;
     const frame = rect => ({
-      transform: `translate(${rect.left - corner.left}px, ${rect.top - corner.top}px) scale(${rect.width / corner.width}, ${rect.height / corner.height})`
+      transform: `translate(${rect.left + rect.width / 2 - corner.left - corner.width / 2}px, ${rect.top + rect.height / 2 - corner.top - corner.height / 2}px)`
     });
+    link.style.pointerEvents = nextTarget ? 'none' : '';
     if (reducedMotion.matches) {
       link.style.visibility = nextTarget ? 'hidden' : '';
       return;
     }
-    animation = link.animate([frame(before), frame(destination)], {
-      duration: 420, easing: 'cubic-bezier(.22,1,.36,1)'
+    const compact = window.matchMedia('(max-width: 768px)').matches;
+    const frames = compact
+      ? [{ opacity: nextTarget ? 1 : 0, transform: 'scale(.92)' }, { opacity: nextTarget ? 0 : 1, transform: 'scale(1)' }]
+      : [{ ...frame(before), opacity: nextTarget ? 1 : 0 }, { ...frame(destination), opacity: nextTarget ? 0 : 1 }];
+    animation = link.animate(frames, {
+      duration: compact ? 160 : 320, easing: 'cubic-bezier(.22,1,.36,1)'
     });
     animation.onfinish = () => {
       // The original link keeps its text, destination, layout and keyboard access.
@@ -779,6 +787,8 @@ function injectFloatingWhatsapp() {
   }
   window.addEventListener('scroll', scheduleDock, { passive: true });
   window.addEventListener('resize', scheduleDock);
+  window.visualViewport?.addEventListener('resize', scheduleDock);
+  window.visualViewport?.addEventListener('scroll', scheduleDock);
   new ResizeObserver(scheduleDock).observe(document.body);
   updateDock();
 }
