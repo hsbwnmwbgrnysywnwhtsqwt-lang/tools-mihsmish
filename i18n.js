@@ -123,7 +123,6 @@ const TRANSLATIONS = {
     'hire.cta.desc':      'תמחור שקוף, תקשורת ישירה, עבודה מהירה.',
     'hire.cta.btn':       'שלח לי הודעה ←',
     'hire.cta.whatsapp':  'שלח WhatsApp',
-    'floating.whatsapp':  'דבר איתי ב-WhatsApp',
 
     // --- About page ---
     'about.hero.label':   'אודות',
@@ -348,7 +347,6 @@ const TRANSLATIONS = {
     'hire.cta.desc':      'Transparent pricing, direct communication, fast delivery.',
     'hire.cta.btn':       'Send me a message ←',
     'hire.cta.whatsapp':  'Send WhatsApp',
-    'floating.whatsapp':  'Talk on WhatsApp',
 
     // --- About page ---
     'about.hero.label':   'About',
@@ -488,10 +486,6 @@ function applyLang(lang) {
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
 
-  const floatingWhatsapp = document.querySelector('.floating-whatsapp');
-  if (floatingWhatsapp && t['floating.whatsapp']) {
-    floatingWhatsapp.setAttribute('aria-label', t['floating.whatsapp']);
-  }
 
   // Translate placeholders
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
