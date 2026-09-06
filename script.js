@@ -713,6 +713,98 @@ if ('IntersectionObserver' in window) {
   previewVideos.forEach(loadPreviewVideo);
 }
 
+function injectFloatingWhatsapp() {
+  if (document.querySelector('.floating-whatsapp')) return;
+  const label = document.documentElement.lang === 'en' ? 'Talk on WhatsApp' : 'דבר איתי בוואטסאפ';
+  const link = document.createElement('a');
+  link.className = 'floating-whatsapp';
+  link.href = 'https://wa.me/972535237474';
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.setAttribute('aria-label', label);
+  link.innerHTML = `
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3.2A12.7 12.7 0 0 0 5.08 22.36L3.5 28.5l6.28-1.5A12.7 12.7 0 1 0 16.02 3.2Zm0 2.25a10.45 10.45 0 1 1 0 20.9c-1.83 0-3.55-.47-5.05-1.3l-.38-.22-3.74.9.94-3.64-.25-.4a10.45 10.45 0 0 1 8.48-16.24Zm-4.1 5.38c-.22-.5-.45-.5-.66-.51h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.46s1.06 2.86 1.2 3.06c.15.2 2.05 3.3 5.05 4.5 2.5 1 3 .8 3.55.75.55-.05 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.92-2.18Z"/></svg>
+    <span data-i18n="floating.whatsapp">${label}</span>
+  `;
+  document.body.appendChild(link);
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let dockedTarget = null;
+  let frameId = 0;
+  let moving = false;
+  let position = null;
+  let origin = null;
+  let startedAt = 0;
+  const duration = 360;
+
+  function destination(target) {
+    const rect = (target?.querySelector('svg') || target || link).getBoundingClientRect();
+    if (target) return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+    // Read the fixed corner independently of the animated transform.
+    const x = parseFloat(getComputedStyle(link).right);
+    const y = parseFloat(getComputedStyle(link).bottom);
+    return { x: window.innerWidth - x - link.offsetWidth / 2,
+      y: window.innerHeight - y - link.offsetHeight / 2 };
+  }
+
+  function update(time) {
+    frameId = 0;
+    const viewport = window.visualViewport;
+    const top = Math.max(viewport?.offsetTop || 0,
+      document.querySelector('.navbar')?.getBoundingClientRect().bottom || 0);
+    const bottom = (viewport?.offsetTop || 0) + (viewport?.height || window.innerHeight);
+    const candidates = [...document.querySelectorAll('a[href]')].filter(target => {
+      if (target === link) return false;
+      const url = new URL(target.href, location.href);
+      if (!['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname) && url.protocol !== 'whatsapp:') return false;
+      const rect = target.getBoundingClientRect();
+      return getComputedStyle(target).visibility === 'visible' && rect.width > 0 && rect.height > 0 &&
+        rect.bottom > top && rect.top < bottom && rect.right > 0 && rect.left < window.innerWidth;
+    });
+    const next = candidates.includes(dockedTarget) ? dockedTarget : candidates[0] || null;
+    if (next !== dockedTarget) {
+      origin = moving ? position : destination(dockedTarget);
+      dockedTarget = next;
+      startedAt = time;
+      moving = true;
+      if (next && document.activeElement === link) next.focus({ preventScroll: true });
+      link.style.visibility = '';
+      link.style.pointerEvents = next ? 'none' : '';
+    }
+    if (!moving) return;
+    const progress = reducedMotion.matches ? 1 : Math.min(1, (time - startedAt) / duration);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const to = destination(dockedTarget);
+    const corner = destination(null);
+    position = { x: origin.x + (to.x - origin.x) * eased, y: origin.y + (to.y - origin.y) * eased };
+    link.style.transform = `translate(${position.x - corner.x}px, ${position.y - corner.y}px)`;
+    // Keep the icon round throughout the move; fade only as it reaches the page link.
+    link.style.opacity = dockedTarget ? String(1 - Math.max(0, (progress - .75) / .25)) : '1';
+    if (progress < 1) {
+      schedule();
+    } else {
+      moving = false;
+      link.style.visibility = dockedTarget ? 'hidden' : '';
+      link.style.transform = '';
+      link.style.opacity = '';
+    }
+  }
+  function schedule() {
+    if (!frameId) frameId = requestAnimationFrame(update);
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.visualViewport?.addEventListener('resize', schedule);
+  window.visualViewport?.addEventListener('scroll', schedule);
+  new ResizeObserver(schedule).observe(document.body);
+  new MutationObserver(() => {
+    link.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Talk on WhatsApp' : 'דבר איתי בוואטסאפ');
+    schedule();
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  schedule();
+}
+
+injectFloatingWhatsapp();
+
 // Return to the beginning after scrolling.
 const backToTop = document.createElement('button');
 backToTop.className = 'back-to-top';
