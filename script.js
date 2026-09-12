@@ -734,16 +734,18 @@ function injectFloatingWhatsapp() {
   let position = null;
   let origin = null;
   let startedAt = 0;
-  const duration = 360;
+  const duration = 440;
+  let concealedTarget = null;
+  const caption = link.querySelector("span");
 
   function destination(target) {
-    const rect = (target?.querySelector('svg') || target || link).getBoundingClientRect();
-    if (target) return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
-    // Read the fixed corner independently of the animated transform.
-    const x = parseFloat(getComputedStyle(link).right);
-    const y = parseFloat(getComputedStyle(link).bottom);
-    return { x: window.innerWidth - x - link.offsetWidth / 2,
-      y: window.innerHeight - y - link.offsetHeight / 2 };
+    if (target) {
+      const rect = target.getBoundingClientRect();
+      return { x: rect.left, y: rect.top, width: rect.width, height: rect.height };
+    }
+    const style = getComputedStyle(link);
+    return { x: window.innerWidth - parseFloat(style.right) - 48,
+      y: window.innerHeight - parseFloat(style.bottom) - 48, width: 48, height: 48 };
   }
 
   function update(time) {
@@ -763,7 +765,17 @@ function injectFloatingWhatsapp() {
     const next = candidates.includes(dockedTarget) ? dockedTarget : candidates[0] || null;
     if (next !== dockedTarget) {
       origin = moving ? position : destination(dockedTarget);
+      concealedTarget?.classList.remove('whatsapp-morph-target');
       dockedTarget = next;
+      concealedTarget = next;
+      next?.classList.add('whatsapp-morph-target');
+      if (next) {
+        caption.textContent = next.textContent.trim();
+        const targetStyle = getComputedStyle(next);
+        link.style.fontSize = targetStyle.fontSize;
+        link.style.fontWeight = targetStyle.fontWeight;
+        link.style.fontFamily = targetStyle.fontFamily;
+      }
       startedAt = time;
       moving = true;
       if (next && document.activeElement === link) next.focus({ preventScroll: true });
@@ -775,17 +787,31 @@ function injectFloatingWhatsapp() {
     const eased = 1 - Math.pow(1 - progress, 3);
     const to = destination(dockedTarget);
     const corner = destination(null);
-    position = { x: origin.x + (to.x - origin.x) * eased, y: origin.y + (to.y - origin.y) * eased };
-    link.style.transform = `translate(${position.x - corner.x}px, ${position.y - corner.y}px)`;
-    // Keep the icon round throughout the move; fade only as it reaches the page link.
-    link.style.opacity = dockedTarget ? String(1 - Math.max(0, (progress - .75) / .25)) : '1';
+    position = {};
+    for (const key of ['x', 'y', 'width', 'height']) {
+      position[key] = origin[key] + (to[key] - origin[key]) * eased;
+    }
+    link.style.width = `${position.width}px`;
+    link.style.height = `${position.height}px`;
+    // Right/bottom anchoring changes as the pill grows: compensate without scaling its contents.
+    link.style.transform = `translate(${position.x - corner.x + position.width - 48}px, ${position.y - corner.y + position.height - 48}px)`;
+    const expansion = Math.max(0, Math.min(1, (position.width - 48) / Math.max(1, (dockedTarget ? to.width : origin.width) - 48)));
+    caption.style.maxWidth = `${Math.max(0, position.width - 64)}px`;
+    caption.style.opacity = String(expansion);
+    link.style.gap = `${8 * expansion}px`;
     if (progress < 1) {
       schedule();
     } else {
       moving = false;
       link.style.visibility = dockedTarget ? 'hidden' : '';
       link.style.transform = '';
-      link.style.opacity = '';
+      link.style.width = '';
+      link.style.height = '';
+      caption.style.maxWidth = '';
+      caption.style.opacity = '';
+      link.style.gap = '';
+      concealedTarget?.classList.remove('whatsapp-morph-target');
+      concealedTarget = null;
     }
   }
   function schedule() {
